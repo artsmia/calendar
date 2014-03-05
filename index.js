@@ -28,7 +28,7 @@ var typeColor = {
 var eventHtml = function(d) {
   var dateFrom = new Date(d.dateFrom*1000)
     , dateTo = new Date(d.dateTo*1000)
-    , dates = (dateFrom === dateTo ? [dateFrom] : [dateFrom, dateTo])
+    , dates = (d.dateFrom === d.dateTo ? [dateFrom] : [dateFrom, dateTo])
     , dateString = dates.map(function(date) {
       return date.toLocaleString().split(" ")[0]
     }).join(" — ")
