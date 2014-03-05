@@ -2,14 +2,20 @@ var fs = require('fs')
 var cal = JSON.parse(fs.readFileSync('calendar.json', 'utf8'))
 var d3 = require('d3')
 
+var sortedStart = cal.instances.slice(0).sort(function(a, b) { return a.dateFrom - b.dateFrom })
+  , sortedEnd = cal.instances.slice(0).sort(function(a, b) { return a.dateTo - b.dateTo })
+
+cal.earliest = sortedStart[0]
+cal.latest = sortedEnd[sortedEnd.length-1]
+
 window.d3 = d3
 
 var w = window.innerWidth
   , h = window.innerHeight
 
 var x = d3.scale.linear()
-  .domain([cal.minDate, cal.maxDate])
-  .range([0, w-100])
+  .domain([cal.earliest.dateFrom, cal.latest.dateTo])
+  .range([0, w])
 
 var y = d3.scale.linear()
   .domain([0, cal.instances.length])
