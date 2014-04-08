@@ -1,6 +1,9 @@
 var fs = require('fs')
 var cal = JSON.parse(fs.readFileSync('calendar.json', 'utf8'))
 var d3 = require('d3')
+var today = require('./today')
+
+cal.instances = today()
 
 var sortedStart = cal.instances.slice(0).sort(function(a, b) { return a.dateFrom - b.dateFrom })
   , sortedEnd = cal.instances.slice(0).sort(function(a, b) { return a.dateTo - b.dateTo })
@@ -69,4 +72,5 @@ window.api = {
   cal: cal,
   x: x,
   y: y,
+  today: today()
 }
