@@ -9303,11 +9303,11 @@ module.exports = cal
   }
 }();
 },{}],4:[function(require,module,exports){
-var today = require('./today')
+var today = require('../today')
 var d3 = require('d3')
 
 var events = today(new Date(2014, 3, 17), false),
-    eventHtml = require('./eventHtml')
+    eventHtml = require('../eventHtml')
 
 window.d3 = d3
 
@@ -9320,7 +9320,7 @@ var events = list.selectAll(".event")
       return eventHtml(d, true)
     })
 
-},{"./eventHtml":1,"./today":5,"d3":3}],5:[function(require,module,exports){
+},{"../eventHtml":1,"../today":5,"d3":3}],5:[function(require,module,exports){
 var cal = require('./events')
 
 module.exports = function eventsToday(date, includeMultiday) {

@@ -1,8 +1,8 @@
-var today = require('./today')
+var today = require('../today')
 var d3 = require('d3')
 
 var events = today(new Date(2014, 3, 17), false),
-    eventHtml = require('./eventHtml')
+    eventHtml = require('../eventHtml')
 
 window.d3 = d3
 
