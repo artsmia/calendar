@@ -9333,9 +9333,10 @@ module.exports = function eventsToday(date, includeMultiday) {
         multiDay = dateFrom - dateTo != 0,
         // if this is a "1 day" event, dateTo and dateFrom will both be the beginning of the given day
         // so we need to check that dateTo is 'within 24 hours' of the requested datetime
-        within24hours = date - dateTo <= 1000*60*60*24
+        msPerDay = 86400 * 1000,
+        beginningOfDay = date - (date % msPerDay)
 
-    var isToday = dateFrom <= date && (multiDay && date <= dateTo || within24hours)
+    var isToday = dateFrom <= date && (multiDay && date <= dateTo || beginningOfDay <= dateTo)
     return includeMultiday ? isToday : !multiDay && isToday
   })
 }
