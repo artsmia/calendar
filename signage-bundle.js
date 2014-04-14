@@ -27,65 +27,6 @@ module.exports = cal
 
 
 },{"fs":6}],3:[function(require,module,exports){
-var cal = require('./events')
-var today = require('./today')
-var d3 = require('d3')
-
-window.d3 = d3
-
-var w = window.innerWidth
-  , h = window.innerHeight
-
-var x = d3.scale.linear()
-  .domain([cal.earliest.dateFrom, cal.latest.dateTo])
-  .range([0, w])
-
-var y = d3.scale.linear()
-  .domain([0, cal.instances.length])
-  .range([0, h])
-
-var typeColor = {
-  "classes": "magenta",
-  "family-events": "orange",
-  "film-and-performance": "purple",
-  "lectures-and-seminars": "blue",
-  "special-events": "red",
-  "tours": "green",
-  "exhibitions": "chartreuse"
-}
-
-var eventHtml = require('./eventHtml.js')
-
-var svg = d3.select("body").append("svg")
-  .attr("width", w)
-  .attr("class", "timeline")
-
-var div = d3.select("body").append("div")
-  .attr("class", "event")
-  .style("opacity", 0);
-
-var instances = svg.selectAll('.instance')
-    .data(cal.instances)
-  .enter().append('rect')
-    .attr("class", "instance")
-    .attr("x", function(d) { return x(d.dateFrom) })
-    .attr("y", function(d, i) { return y(i) })
-    .attr("height", 5)
-    .attr("width", function(d) { return Math.max(x(d.dateTo) - x(d.dateFrom), 5) })
-    .attr('fill', function(d, i) { return typeColor[d.typeCategory] })
-  .on('mouseover', function(d, i) {
-    div.html(eventHtml(d))
-    div.transition().duration(200).style("opacity", "0.9")
-  })
-
-window.api = {
-  cal: cal,
-  x: x,
-  y: y,
-  today: today
-}
-
-},{"./eventHtml.js":1,"./events":2,"./today":5,"d3":4}],4:[function(require,module,exports){
 !function() {
   var d3 = {
     version: "3.4.3"
@@ -9361,7 +9302,25 @@ window.api = {
     this.d3 = d3;
   }
 }();
-},{}],5:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
+var today = require('./today')
+var d3 = require('d3')
+
+var events = today(new Date(2014, 3, 17), false),
+    eventHtml = require('./eventHtml')
+
+window.d3 = d3
+
+var list = d3.select("body").append("ul")
+
+var events = list.selectAll(".event")
+    .data(events)
+  .enter().append("li")
+    .html(function(d) {
+      return eventHtml(d, true)
+    })
+
+},{"./eventHtml":1,"./today":5,"d3":3}],5:[function(require,module,exports){
 var cal = require('./events')
 
 module.exports = function eventsToday(date, includeMultiday) {
@@ -9384,4 +9343,4 @@ module.exports = function eventsToday(date, includeMultiday) {
 
 },{"./events":2}],6:[function(require,module,exports){
 
-},{}]},{},[3])
+},{}]},{},[4])
