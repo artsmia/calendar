@@ -1,8 +1,9 @@
 var fs = require('fs')
 var cal = JSON.parse(fs.readFileSync('calendar.json', 'utf8'))
 
-module.exports = function eventsToday(date) {
-  var date = date || new Date
+module.exports = function eventsToday(date, includeMultiday) {
+  var date = date || new Date,
+      includeMultiday = (typeof includeMultiday != 'undefined') ? includeMultiday : true
 
   return cal.instances.filter(function(event) {
     var dateFrom = new Date(event.dateFrom*1000),
@@ -13,7 +14,7 @@ module.exports = function eventsToday(date) {
         within24hours = date - dateTo <= 1000*60*60*24
 
     var isToday = dateFrom <= date && (multiDay && date <= dateTo || within24hours)
-    return isToday
+    return includeMultiday ? isToday : !multiDay && isToday
   })
 }
 
