@@ -1,5 +1,4 @@
-var fs = require('fs')
-var cal = JSON.parse(fs.readFileSync('calendar.json', 'utf8'))
+var cal = require('./events')
 
 module.exports = function eventsToday(date, includeMultiday) {
   var date = date || new Date,
