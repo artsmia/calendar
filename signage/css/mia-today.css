@@ -1,0 +1,155 @@
+/* MIA -TODAY */
+
+body{
+	font-family: "proxima-nova","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight:300;
+	color:#222;
+	width:720px;
+	height:1280px;
+}
+
+/* =Clearfix (all browsers)
+--------------------------------*/
+.clearfix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+/* IE6 */ 
+* html .clearfix {height: 1%;}
+/* IE7 */
+*:first-child+html .clearfix {min-height: 1px;}
+
+/***  event colors  ***/
+
+.film-performance{
+	border-color:#812990;
+}
+
+.special-event{
+	border-color:#ede1d24;
+}
+
+.lecture-seminar{
+	border-color:#00aeef;
+}
+
+.class{
+	border-color:#ec008c;
+}
+
+.tour{
+	border-color:#00b48d;
+}
+
+.exhibition{
+	border-color:#000000;
+}
+
+.family-event{
+	border-color:#f58220;
+}
+
+/***  brand colors  ***/
+
+.red {
+	color: #b7121a;
+}
+
+.orange {
+	color: #ff9900;
+}
+
+.gold {
+	color: #fecc2e;
+}
+
+.dkorange {
+	color: #ff6600;
+}
+
+.dkgreen {
+	color: #298658;
+}
+
+.blue {
+	color: #1788a3;
+}
+
+.ltgreen {
+	color: #a3c380;
+	}
+	
+ul{}
+	
+li{
+	width:100%;
+	display:block;
+	margin:1em;
+	padding:2em;
+	border-top:15px solid #000;
+	background: #dddddd; /* Old browsers */
+	background: -moz-linear-gradient(top,  #dddddd 0%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #dddddd 0%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #dddddd 0%,#ededed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #dddddd 0%,#ededed 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #dddddd 0%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+}
+
+li h3 {
+	margin-bottom:20px;
+	font-size:2em;
+}
+
+li h3 a{
+	font-weight:600;
+	color:#000;
+	text-decoration:none;
+	margin:0;
+}
+
+
+
+li p {
+	margin:0;
+	padding:0;
+	text-transform:uppercase;
+}
+
+li p span.circ {
+	border-radius:50%;
+	text-align: center;
+	width:85px;
+	height:85px;
+	float:right;
+	display:inline-block;
+	background-color:#000;
+}
+
+li p span.time{
+	/*color:#ed1d24;*/
+	color:#fff;
+	display:inline-block;
+	padding-top:15px;
+	font-weight:600;
+	font-size:1.75em;
+}
+
+li span.starts{
+	float:right;
+	padding:1em;
+	background-color:
+}
+
+
+
+
+
+
+
+
