@@ -1,0 +1,25 @@
+{
+  "name": "mia-calendar",
+  "version": "0.0.0",
+  "description": "What's happening at the MIA.",
+  "main": "index.js",
+  "dependencies": {
+    "d3": "~3.4.3",
+    "brfs": "~1.0.0",
+    "sugar": "^1.4.1"
+  },
+  "devDependencies": {
+    "brfs": "^1.0.2",
+    "browserify": "^3.43.0",
+    "watchify": "^0.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "artsmia/calendar-graph"
+  },
+  "author": "",
+  "license": "MIT"
+}
