@@ -6,7 +6,10 @@ body{
 	color:#222;
 	width:720px;
 	height:1280px;
+	background-color: #fff;
 }
+
+/*#pulse{width:100%;height:100%;background:rgba(129,41,144,0.3);margin:0 auto;padding:0;overflow:visible;}*/
 
 /* =Clearfix (all browsers)
 --------------------------------*/
@@ -29,7 +32,7 @@ visibility: hidden;
 }
 
 .special-event{
-	border-color:#ede1d24;
+	border-color:#ed1d24;
 }
 
 .lecture-seminar{
@@ -85,20 +88,12 @@ visibility: hidden;
 ul{}
 	
 li{
-	width:100%;
+	width:620px;
 	display:block;
 	margin:1em;
 	padding:2em;
 	border-top:15px solid #000;
-	background: #dddddd; /* Old browsers */
-	background: -moz-linear-gradient(top,  #dddddd 0%, #ededed 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #dddddd 0%,#ededed 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #dddddd 0%,#ededed 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #dddddd 0%,#ededed 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #dddddd 0%,#ededed 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
-
+	background: rgba(255,255,255,0.5);
 }
 
 li h3 {
@@ -140,11 +135,59 @@ li p span.time{
 	font-size:1.75em;
 }
 
-li span.starts{
+li div.starts{
 	float:right;
-	padding:1em;
-	background-color:
+	padding:0.35em;
+	border:3px solid #666;
+	display:inline-block;
+	margin-top:15px;
+	
 }
+li div.line{
+	float:right;
+	border-top:3px solid #666;
+	display:inline-block;
+	margin-top:30px;
+	width:30px;
+}
+/*
+@-webkit-keyframes pulse { 
+	0% {background-color: rgba(129,41,144,0.3);} 
+	14% {background-color: rgba(237,29,36,0.3);} 
+	28% {background-color: rgba(0,174,239,0.3);} 
+	42% {background-color: rgba(236,0,140,0.3);} 
+	56% {background-color: rgba(0,80,141,0.3);}
+	84% {background-color: rgba(0,0,0,0.3);}
+	100% {background-color: rgba(129,41,144,0.3);}
+} 
+*/
+
+@-webkit-keyframes pulse { 
+	0% {background-color: #bdbdb0;} 
+	14% {background-color: #c6cdc7;} 
+	28% {background-color: #b0a690;} 
+	42% {background-color: #bdbdb0;} 
+	56% {background-color: #d7d6cb;}
+	84% {background-color: #959a8f;}
+	100% {background-color: #bdbdb0;}
+
+} 
+	body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
