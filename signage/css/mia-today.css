@@ -102,10 +102,11 @@ li h3 {
 }
 
 li h3 a{
-	font-weight:600;
+	font-weight:300;
 	color:#000;
 	text-decoration:none;
 	margin:0;
+	text-transform:uppercase;
 }
 
 
@@ -113,7 +114,7 @@ li h3 a{
 li p {
 	margin:0;
 	padding:0;
-	text-transform:uppercase;
+	font-weight:600;
 }
 
 li p span.circ {
@@ -130,9 +131,10 @@ li p span.time{
 	/*color:#ed1d24;*/
 	color:#fff;
 	display:inline-block;
-	padding-top:17px;
+	padding-top:23px;
 	font-weight:600;
 	font-size:1.75em;
+	line-height:0.85em;
 }
 
 li div.starts{
