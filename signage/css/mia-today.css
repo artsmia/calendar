@@ -124,8 +124,8 @@ li p {
 li p span.circ {
 	border-radius:50%;
 	text-align: center;
-	width:85px;
-	height:85px;
+	width:90px;
+	height:90px;
 	float:right;
 	display:inline-block;
 	background-color:#000;
@@ -135,7 +135,7 @@ li p span.time{
 	/*color:#ed1d24;*/
 	color:#fff;
 	display:inline-block;
-	padding-top:15px;
+	padding-top:17px;
 	font-weight:600;
 	font-size:1.75em;
 }
