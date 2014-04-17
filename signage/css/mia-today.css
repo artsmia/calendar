@@ -174,8 +174,30 @@ li div.line{
 	84% {background-color: #959a8f;}
 	100% {background-color: #bdbdb0;}
 
+}
+
+@-moz-keyframes pulse { 
+	0% {background-color: #bdbdb0;} 
+	14% {background-color: #c6cdc7;} 
+	28% {background-color: #b0a690;} 
+	42% {background-color: #bdbdb0;} 
+	56% {background-color: #d7d6cb;}
+	84% {background-color: #959a8f;}
+	100% {background-color: #bdbdb0;}
+
+}
+
+@-ms-keyframes pulse { 
+	0% {background-color: #bdbdb0;} 
+	14% {background-color: #c6cdc7;} 
+	28% {background-color: #b0a690;} 
+	42% {background-color: #bdbdb0;} 
+	56% {background-color: #d7d6cb;}
+	84% {background-color: #959a8f;}
+	100% {background-color: #bdbdb0;}
+
 } 
-	body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate; }
+	body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate;-moz-animation: pulse 60s infinite alternate;-ms-animation: pulse 60s infinite alternate;}
 
 
 
