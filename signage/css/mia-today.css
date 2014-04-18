@@ -1,0 +1,203 @@
+/* MIA-TODAY */
+
+body{
+	font-family: "proxima-nova","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight:300;
+	color:#222;
+	width:720px;
+	height:1280px;
+	background-color: #fff;
+	overflow-x:hidden;
+}
+
+/*#pulse{width:100%;height:100%;background:rgba(129,41,144,0.3);margin:0 auto;padding:0;overflow:visible;}*/
+
+/* =Clearfix (all browsers)
+--------------------------------*/
+.clearfix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+/* IE6 */ 
+* html .clearfix {height: 1%;}
+/* IE7 */
+*:first-child+html .clearfix {min-height: 1px;}
+
+/***  event colors  ***/
+
+.film-performance{
+	border-color:#812990;
+}
+
+.special-event, .special-events {
+	border-color:#ed1d24;
+}
+
+.lecture-seminar, .lectures-and-seminars {
+	border-color:#00aeef;
+}
+
+.class{
+	border-color:#ec008c;
+}
+
+.tour, .tours{
+	border-color:#00b48d;
+}
+
+.exhibition{
+	border-color:#000000;
+}
+
+.family-event{
+	border-color:#f58220;
+}
+
+/***  brand colors  ***/
+
+.red {
+	color: #b7121a;
+}
+
+.orange {
+	color: #ff9900;
+}
+
+.gold {
+	color: #fecc2e;
+}
+
+.dkorange {
+	color: #ff6600;
+}
+
+.dkgreen {
+	color: #298658;
+}
+
+.blue {
+	color: #1788a3;
+}
+
+.ltgreen {
+	color: #a3c380;
+	}
+	
+ul{}
+	
+li{
+	width:620px;
+	display:block;
+	margin:1em auto;
+	padding:2em;
+	border-top:15px solid #000;
+	background: rgba(255,255,255,0.65);
+}
+
+li h3 {
+	margin-bottom:20px;
+	font-size:2em;
+}
+
+li h3 a{
+	font-weight:300;
+	color:#000;
+	text-decoration:none;
+	margin:0;
+	text-transform:uppercase;
+}
+
+
+
+li p {
+	margin:0;
+	padding:0;
+	font-weight:600;
+}
+
+li p span.circ {
+	border-radius:50%;
+	text-align: center;
+	width:90px;
+	height:90px;
+	float:right;
+	display:inline-block;
+	background-color:#000;
+}
+
+li p span.time{
+	/*color:#ed1d24;*/
+	color:#fff;
+	display:inline-block;
+	padding-top:23px;
+	font-weight:600;
+	font-size:1.75em;
+	line-height:0.85em;
+}
+
+li div.starts{
+	float:right;
+	padding:0.35em;
+	border:3px solid #666;
+	display:inline-block;
+	margin-top:15px;
+	
+}
+li div.line{
+	float:right;
+	border-top:3px solid #666;
+	display:inline-block;
+	margin-top:30px;
+	width:30px;
+}
+/*
+@-webkit-keyframes pulse { 
+	0% {background-color: rgba(129,41,144,0.3);} 
+	14% {background-color: rgba(237,29,36,0.3);} 
+	28% {background-color: rgba(0,174,239,0.3);} 
+	42% {background-color: rgba(236,0,140,0.3);} 
+	56% {background-color: rgba(0,80,141,0.3);}
+	84% {background-color: rgba(0,0,0,0.3);}
+	100% {background-color: rgba(129,41,144,0.3);}
+} 
+*/
+
+@-webkit-keyframes pulse { 
+	0% {background-color: #bdbdb0;} 
+	14% {background-color: #c6cdc7;} 
+	28% {background-color: #b0a690;} 
+	42% {background-color: #bdbdb0;} 
+	56% {background-color: #d7d6cb;}
+	84% {background-color: #959a8f;}
+	100% {background-color: #bdbdb0;}
+
+} 
+	/*body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate; }*/
+	
+	@-moz-keyframes pulse { 
+	0% {background-color: #bdbdb0;} 
+	14% {background-color: #c6cdc7;} 
+	28% {background-color: #b0a690;} 
+	42% {background-color: #bdbdb0;} 
+	56% {background-color: #d7d6cb;}
+	84% {background-color: #959a8f;}
+	100% {background-color: #bdbdb0;}
+
+}
+
+@-ms-keyframes pulse { 
+	0% {background-color: #bdbdb0;} 
+	14% {background-color: #c6cdc7;} 
+	28% {background-color: #b0a690;} 
+	42% {background-color: #bdbdb0;} 
+	56% {background-color: #d7d6cb;}
+	84% {background-color: #959a8f;}
+	100% {background-color: #bdbdb0;}
+
+} 
+
+body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate;-moz-animation: pulse 60s infinite alternate;-ms-animation: pulse 60s infinite alternate;}
+

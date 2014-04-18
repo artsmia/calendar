@@ -10,7 +10,8 @@ module.exports = function(d, excludeDate) {
     }).join(" — ")
 
   return "<h3><a href='"+d.permalink+"'>"+d.title+"</a></h3>" +
-    "<p>"+d.typeName+". "+d.timeFrom+" "+(excludeDate ? '' : dateString)+"</p>"
+    "<p>"+d.typeName+". <span class='circ'><span class='time'>"+d.timeFrom+" "+(excludeDate ? '' : dateString)+"</span></span></p>" +
+    "<div class='line'></div><div class='starts'>Starts in "+Date.create(d.timeFrom).relative()+" minutes</div>"
 }
 
 },{}],2:[function(require,module,exports){

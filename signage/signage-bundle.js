@@ -8,9 +8,11 @@ module.exports = function(d, excludeDate) {
     , dateString = dates.map(function(date) {
       return date.toLocaleString().split(" ")[0]
     }).join(" — ")
+    , relativeTime = Date.create(d.timeFrom).relative()
 
   return "<h3><a href='"+d.permalink+"'>"+d.title+"</a></h3>" +
-    "<p>"+d.typeName+". "+d.timeFrom+" "+(excludeDate ? '' : dateString)+"</p>"
+    "<p>"+d.typeName+" <span class='circ'><span class='time'>"+d.timeFrom+" "+(excludeDate ? '' : dateString)+"</span></span></p>" +
+    "<div class='line'></div><div class='starts'>"+relativeTime+"</div>"
 }
 
 },{}],2:[function(require,module,exports){
@@ -18566,14 +18568,13 @@ var opacity = d3.scale.linear()
   .domain([events[events.length-1].dateFrom, new Date/1000])
   .clamp(true)
 
+list.attr("id", "pulse")
+
 function update(events) {
   var events = list.selectAll("li")
       .data(events.reverse(), function(d) { return d.title + d.timeFrom + d.timeTo })
 
-  events.attr("class", "update")
-
   events.enter().append("li")
-      .attr("class", "enter")
 
   events
       .html(function(d) {
@@ -18583,23 +18584,27 @@ function update(events) {
         return opacity(Date.create(d.timeFrom)/1000)
       })
       .classed("now", function(d) { return d.now })
+      .classed("clearfix", true)
+      .attr('class', function(d) {
+        this.classList.add(d.typeCategory)
+        return this.classList.toString()
+      })
 
   events.exit().remove()
 }
 
 update(events)
-setInterval(function() {
-  // update events to only include upcoming
-  var pnf = today.pastNowFuture(events)
-  pastEvents = pnf.past
-  pnf.now.forEach(function(e) { e.now = true; console.log(e) })
-  events = pnf.now.concat(pnf.future)
-  update(events)
-}, 1000)
-
-window.events = events
-window.pnf = today.pastNowFuture
-window.opacity = opacity
+if(window.location.hash != '#all') {
+  setInterval(function() {
+    // update events to only include upcoming
+    var pnf = today.pastNowFuture(events)
+    pastEvents = pnf.past
+    pnf.now.forEach(function(e) { e.now = true })
+    events = pnf.now.concat(pnf.future)
+    // if(events.length == 0) events = pastEvents
+    update(events)
+  }, 1000)
+}
 
 },{"../eventHtml":1,"../today":6,"d3":3,"sugar":4}],6:[function(require,module,exports){
 require('sugar')
