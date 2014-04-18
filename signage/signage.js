@@ -3,7 +3,7 @@ var today = require('../today')
 var d3 = window.d3 = require('d3')
 
 var list = d3.select("body").append("ul"),
-    events = today(new Date(2014, 3, 17), false),
+    events = today(new Date, false),
     pastEvents = today.earlier(events)
     eventHtml = require('../eventHtml')
 
