@@ -4,8 +4,8 @@ body{
 	font-family: "proxima-nova","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight:300;
 	color:#222;
-	width:720px;
-	height:1280px;
+	width:1080px;
+	height:1920px;
 	background-color: #fff;
 	overflow-x:hidden;
 }
@@ -89,7 +89,7 @@ visibility: hidden;
 ul{}
 	
 li{
-	width:620px;
+	width:80%;
 	display:block;
 	margin:1em auto;
 	padding:2em;
@@ -132,11 +132,17 @@ li p span.time{
 	/*color:#ed1d24;*/
 	color:#fff;
 	display:inline-block;
-	padding-top:23px;
+	padding-top:34px;
 	font-weight:600;
 	font-size:1.75em;
 	line-height:0.85em;
 }
+
+li p span.twoln{
+	padding-top:23px;
+	font-weight:600;
+}
+
 
 li div.starts{
 	float:right;
