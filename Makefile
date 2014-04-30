@@ -10,3 +10,6 @@ calendar:
 build:
 	browserify -t brfs index.js -o bundle.js
 	browserify -t brfs signage/signage.js -o signage/signage-bundle.js
+
+by_date:
+	@cat calendar.json | jq '.instances | group_by(.dateFrom) | map({length: .|length, event: map(.title+" -- "+.dateDisplay)})'
