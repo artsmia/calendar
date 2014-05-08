@@ -18572,7 +18572,7 @@ list.attr("id", "pulse")
 
 function update(events) {
   var events = list.selectAll("li")
-      .data(events.reverse(), function(d) { return d.title + d.timeFrom + d.timeTo })
+      .data(events, function(d) { return d.title + d.timeFrom + d.timeTo })
 
   events.enter().append("li")
 
@@ -18581,9 +18581,12 @@ function update(events) {
         return eventHtml(d, true)
       })
       .style("opacity", function(d) {
-        return opacity(Date.create(d.timeFrom)/1000)
+        // TODO: should this happen in css based on classes {past, now, future}?
+        return Date.create(d.timeFrom).advance(15*60*1000) > new Date ? 1 : 0.5
       })
       .classed("now", function(d) { return d.now })
+      .classed("future", function(d) { return d.future })
+      .classed("past", function(d) { return d.past })
       .classed("clearfix", true)
       .attr('class', function(d) {
         this.classList.add(d.typeCategory)
@@ -18595,14 +18598,16 @@ function update(events) {
 
 update(events)
 if(window.location.hash != '#all') {
-  setInterval(function() {
+  var updateLoop = setInterval(function() {
     // update events to only include upcoming
     var pnf = today.pastNowFuture(events)
-    pastEvents = pnf.past
     pnf.now.forEach(function(e) { e.now = true })
-    events = pnf.now.concat(pnf.future)
-    // if(events.length == 0) events = pastEvents
+    pnf.future.forEach(function(e) { e.future = true })
+    pnf.past.forEach(function(e) { e.past = true })
+
+    events = pnf.past.last(3).concat(pnf.now).concat(pnf.future)
     update(events)
+    if(window.location.hash != 'freeze') return clearInterval(updateLoop)
   }, 1000)
 }
 
@@ -18634,6 +18639,7 @@ module.exports.earlier = function(events) {
 }
 
 module.exports.pastNowFuture = function(events, pad) {
+  // TODO: refactor with Date.advance(millis)
   var now = new Date,
       pad = (pad || 15)*60*1000 // _ minutes in ms
 

@@ -85,16 +85,15 @@ visibility: hidden;
 .ltgreen {
 	color: #a3c380;
 	}
-	
+
 ul{}
-	
+
 li{
-	width:620px;
 	display:block;
-	margin:1em auto;
 	padding:2em;
+  margin: 1em;
 	border-top:15px solid #000;
-	background: rgba(255,255,255,0.65);
+	background: rgba(255,255,255,.9);
 }
 
 li h3 {
@@ -140,11 +139,12 @@ li p span.time{
 
 li div.starts{
 	float:right;
-	padding:0.35em;
+	padding:0.35em 0.5em;
 	border:3px solid #666;
+  border-radius: 7px;
 	display:inline-block;
 	margin-top:15px;
-	
+
 }
 li div.line{
 	float:right;
@@ -197,7 +197,18 @@ li div.line{
 	84% {background-color: #959a8f;}
 	100% {background-color: #bdbdb0;}
 
-} 
+}
 
-body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate;-moz-animation: pulse 60s infinite alternate;-ms-animation: pulse 60s infinite alternate;}
+/* body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate;-moz-animation: pulse 60s infinite alternate;-ms-animation: pulse 60s infinite alternate;} */
 
+body {
+  background-image: url(../62553.jpg);
+  /* background-size: cover; */
+  background-position: center center;
+}
+
+ul {
+	margin:1em auto;
+  width: 80%;
+  position: relative;
+}

@@ -25,6 +25,7 @@ module.exports.earlier = function(events) {
 }
 
 module.exports.pastNowFuture = function(events, pad) {
+  // TODO: refactor with Date.advance(millis)
   var now = new Date,
       pad = (pad || 15)*60*1000 // _ minutes in ms
 
