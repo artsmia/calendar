@@ -209,6 +209,24 @@ body {
 
 ul {
 	margin:1em auto;
-  width: 80%;
+  width: 90%;
   position: relative;
+}
+
+li.future {
+  opacity: 0.9;
+}
+
+li.now {
+  opacity: 1;
+}
+
+li.past {
+  opacity: 0.5;
+}
+
+ul.few {
+  position: fixed;
+  bottom: 11%;
+  left: 5%;
 }
