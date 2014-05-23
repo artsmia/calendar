@@ -18561,9 +18561,24 @@ var d3 = window.d3 = require('d3')
 var list = d3.select("body").append("ul"),
     events = today(new Date, false),
     pastEvents = today.earlier(events)
-    eventHtml = require('../eventHtml')
+    eventHtml = require('../eventHtml'),
+    bed = d3.select("body").append("div"),
+    images = [
+      {url: './wells/mia_44644a-2.jpg', id: 'two'},
+      {url: './wells/mia_44638a.jpg', id: 'one'}
+    ]
 
 list.attr("id", "pulse")
+window.bed = bed
+bed.attr("id", "bed")
+var images = bed.selectAll("div")
+    .data(images)
+    .enter()
+    .append('div')
+    .attr("id", function(d) { return d.id })
+    .style('background-image', function(d) {
+      return "url("+d.url+")"
+    })
 
 function update(events) {
   var events = list.selectAll("li")
