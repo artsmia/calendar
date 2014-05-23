@@ -11,7 +11,7 @@ module.exports = function (date, includeMultiday) {
         multiDay = dateFrom - dateTo != 0,
         // if this is a "1 day" event, dateTo and dateFrom will both be the beginning of the given day
         // so we need to check that dateTo is 'within 24 hours' of the requested datetime
-        msPerDay = 86400 * 1000,
+        msPerDay = 60*24*60 * 1000,
         beginningOfDay = date - (date % msPerDay)
 
     var isToday = dateFrom <= date && (multiDay && date <= dateTo || beginningOfDay <= dateTo)
@@ -27,7 +27,8 @@ module.exports.earlier = function(events) {
 module.exports.pastNowFuture = function(events, pad) {
   // TODO: refactor with Date.advance(millis)
   var now = new Date,
-      pad = (pad || 15)*60*1000 // _ minutes in ms
+      pad = (pad || 15)*60*1000, // _ minutes in ms
+      events = events || module.exports(new Date, false)
 
   return {
     past: events.filter(function(e) { return Date.create(e.timeFrom) < now - pad }),

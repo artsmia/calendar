@@ -18606,16 +18606,16 @@ update(events)
 if(window.location.hash != '#all') {
   var updateLoop = setInterval(function() {
     // update events to only include upcoming
-    var pnf = today.pastNowFuture(events)
+    var pnf = today.pastNowFuture()
     pnf.now.forEach(function(e) { e.now = true })
     pnf.future.forEach(function(e) { e.future = true })
     pnf.past.forEach(function(e) { e.past = true })
 
     events = pnf.past.last(3).concat(pnf.now).concat(pnf.future)
-    list.classed('few', function() { return events.length < 5 })
+    list.classed('few', function() { return events.length < 7 })
     update(events)
-    if(window.location.hash != 'freeze') return clearInterval(updateLoop)
-  }, 1000)
+    if(window.location.hash == '#freeze') return clearInterval(updateLoop)
+  }, 10000)
 }
 
 },{"../eventHtml":1,"../today":6,"d3":3,"sugar":4}],6:[function(require,module,exports){
@@ -18632,7 +18632,7 @@ module.exports = function (date, includeMultiday) {
         multiDay = dateFrom - dateTo != 0,
         // if this is a "1 day" event, dateTo and dateFrom will both be the beginning of the given day
         // so we need to check that dateTo is 'within 24 hours' of the requested datetime
-        msPerDay = 86400 * 1000,
+        msPerDay = 60*24*60 * 1000,
         beginningOfDay = date - (date % msPerDay)
 
     var isToday = dateFrom <= date && (multiDay && date <= dateTo || beginningOfDay <= dateTo)
@@ -18648,7 +18648,8 @@ module.exports.earlier = function(events) {
 module.exports.pastNowFuture = function(events, pad) {
   // TODO: refactor with Date.advance(millis)
   var now = new Date,
-      pad = (pad || 15)*60*1000 // _ minutes in ms
+      pad = (pad || 15)*60*1000, // _ minutes in ms
+      events = events || module.exports(new Date, false)
 
   return {
     past: events.filter(function(e) { return Date.create(e.timeFrom) < now - pad }),

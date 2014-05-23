@@ -50,14 +50,14 @@ update(events)
 if(window.location.hash != '#all') {
   var updateLoop = setInterval(function() {
     // update events to only include upcoming
-    var pnf = today.pastNowFuture(events)
+    var pnf = today.pastNowFuture()
     pnf.now.forEach(function(e) { e.now = true })
     pnf.future.forEach(function(e) { e.future = true })
     pnf.past.forEach(function(e) { e.past = true })
 
     events = pnf.past.last(3).concat(pnf.now).concat(pnf.future)
-    list.classed('few', function() { return events.length < 5 })
+    list.classed('few', function() { return events.length < 7 })
     update(events)
-    if(window.location.hash != 'freeze') return clearInterval(updateLoop)
-  }, 1000)
+    if(window.location.hash == '#freeze') return clearInterval(updateLoop)
+  }, 10000)
 }
