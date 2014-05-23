@@ -4,8 +4,6 @@ body{
 	font-family: "proxima-nova","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight:300;
 	color:#222;
-	width:720px;
-	height:1280px;
 	background-color: #fff;
 	overflow-x:hidden;
 }
@@ -221,7 +219,7 @@ body > #bed * {
   z-index: 0;
 }
 
-@keyframes blurAndFade {
+@-webkit-keyframes blurAndFade {
   0% {
     opacity:1;
     z-index: 1;
@@ -258,14 +256,20 @@ body > #bed * {
 
 #bed * {
   animation-name: blurAndFade;
+  -webkit-animation-name: blurAndFade;
   animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 13s;
+  -webkit-animation-iteration-count: infinite;
+  animation-duration: 345s;
+  -webkit-animation-duration: 345s;
   animation-direction: alternate;
+  -webkit-animation-direction: alternate;
 } /* http://css3.bradshawenterprises.com/cfimg/#cfimg3 */
 
 #bed #two {
-  animation-delay: -13s;
+  animation-delay: -345s;
+  -webkit-animation-delay: -345s;
 }
 
 ul {
