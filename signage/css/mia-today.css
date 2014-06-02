@@ -275,8 +275,10 @@ body > #bed * {
 ul {
 	margin:1em auto;
   width: 90%;
-  position: relative;
   z-index: 11;
+  position: fixed;
+  bottom: 1%;
+  left: 5%;
 }
 
 li.future {
