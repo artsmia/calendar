@@ -296,3 +296,18 @@ ul.few {
   bottom: 0;
   left: 5%;
 }
+
+h1 {
+  box-sizing: border-box;
+  font-size: 700%;
+  z-index: 5;
+  color: white;
+  width: 100%;
+  position: relative;
+  top: 1em;
+  left: 0;
+  text-align: center;
+  padding: 0.15em;
+  background: url(../today.svg) no-repeat 50% 50%;
+  text-indent: -100em;
+}
