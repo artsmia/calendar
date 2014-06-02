@@ -307,3 +307,15 @@ h1 {
   background: url(../today.svg) no-repeat 50% 50%;
   text-indent: -100em;
 }
+
+aside#closed {
+  z-index: 100;
+  position: absolute;
+  top: 15%;
+  font-size: 5em;
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin-left: 0.05em;
+  box-sizing: border-box;
+}

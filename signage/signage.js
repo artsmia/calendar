@@ -61,3 +61,10 @@ if(window.location.hash != '#all') {
     if(window.location.hash == '#freeze') return clearInterval(updateLoop)
   }, 10000)
 }
+
+if((new Date).getDay() == 1) {
+  d3.select("body").append("aside")
+    .html("(We're closed)")
+    .attr('id', 'closed')
+}
+

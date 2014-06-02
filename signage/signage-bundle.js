@@ -18618,6 +18618,13 @@ if(window.location.hash != '#all') {
   }, 10000)
 }
 
+if((new Date).getDay() == 1) {
+  d3.select("body").append("aside")
+    .html("(We're closed)")
+    .attr('id', 'closed')
+}
+
+
 },{"../eventHtml":1,"../today":6,"d3":3,"sugar":4}],6:[function(require,module,exports){
 require('sugar')
 var cal = require('./events')
