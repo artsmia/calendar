@@ -1,10 +1,12 @@
 require('sugar') // `Date.create('5pm')`
 var today = require('../today')
 var d3 = window.d3 = require('d3')
+var date = window.location.hash.match(/20\d\d/) ? new Date(window.location.hash) : new Date()
 
 var list = d3.select("body").append("ul"),
-    events = today(new Date, false),
-    pastEvents = today.earlier(events)
+    _today = today(date),
+    events = _today(false),
+    pastEvents = _today.earlier(events)
     eventHtml = require('../eventHtml'),
     bed = d3.select("body").append("div"),
     images = [
@@ -50,7 +52,7 @@ update(events)
 if(window.location.hash != '#all') {
   var updateLoop = setInterval(function() {
     // update events to only include upcoming
-    var pnf = today.pastNowFuture()
+    var pnf = _today.pastNowFuture()
     pnf.now.forEach(function(e) { e.now = true })
     pnf.future.forEach(function(e) { e.future = true })
     pnf.past.forEach(function(e) { e.past = true })

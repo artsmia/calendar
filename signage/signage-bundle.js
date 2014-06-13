@@ -18557,10 +18557,12 @@ Date.addLocale('zh-TW', {
 require('sugar') // `Date.create('5pm')`
 var today = require('../today')
 var d3 = window.d3 = require('d3')
+var date = window.location.hash.match(/20\d\d/) ? new Date(window.location.hash) : new Date()
 
 var list = d3.select("body").append("ul"),
-    events = today(new Date, false),
-    pastEvents = today.earlier(events)
+    _today = today(date),
+    events = _today(false),
+    pastEvents = _today.earlier(events)
     eventHtml = require('../eventHtml'),
     bed = d3.select("body").append("div"),
     images = [
@@ -18606,7 +18608,7 @@ update(events)
 if(window.location.hash != '#all') {
   var updateLoop = setInterval(function() {
     // update events to only include upcoming
-    var pnf = today.pastNowFuture()
+    var pnf = _today.pastNowFuture()
     pnf.now.forEach(function(e) { e.now = true })
     pnf.future.forEach(function(e) { e.future = true })
     pnf.past.forEach(function(e) { e.past = true })
@@ -18629,40 +18631,45 @@ if((new Date).getDay() == 1) {
 require('sugar')
 var cal = require('./events')
 
-module.exports = function (date, includeMultiday) {
-  var date = date || new Date,
-      includeMultiday = (typeof includeMultiday != 'undefined') ? includeMultiday : true
+module.exports = function(date) {
+  var date = date || new Date(),
+      msPerDay = 60*24*60 * 1000,
+      beginningOfDay = date - (date % msPerDay),
+      relativeNow = 0
 
-  return cal.instances.filter(function(event) {
-    var dateFrom = new Date(event.dateFrom*1000),
-        dateTo = new Date(event.dateTo*1000),
-        multiDay = dateFrom - dateTo != 0,
-        // if this is a "1 day" event, dateTo and dateFrom will both be the beginning of the given day
-        // so we need to check that dateTo is 'within 24 hours' of the requested datetime
-        msPerDay = 60*24*60 * 1000,
-        beginningOfDay = date - (date % msPerDay)
+  var events = function (includeMultiday) {
+    var includeMultiday = (typeof includeMultiday != 'undefined') ? includeMultiday : true
 
-    var isToday = dateFrom <= date && (multiDay && date <= dateTo || beginningOfDay <= dateTo)
-    return includeMultiday ? isToday : !multiDay && isToday
-  })
-}
+    return cal.instances.filter(function(event) {
+      var dateFrom = new Date(event.dateFrom*1000),
+          dateTo = new Date(event.dateTo*1000),
+          multiDay = dateFrom - dateTo != 0
 
-module.exports.earlier = function(events) {
-  var now = new Date
-  return events.filter(function(e) { return Date.create(e.timeFrom) < now })
-}
-
-module.exports.pastNowFuture = function(events, pad) {
-  // TODO: refactor with Date.advance(millis)
-  var now = new Date,
-      pad = (pad || 15)*60*1000, // _ minutes in ms
-      events = events || module.exports(new Date, false)
-
-  return {
-    past: events.filter(function(e) { return Date.create(e.timeFrom) < now - pad }),
-    now: events.filter(function(e) { var eventStart = Date.create(e.timeFrom); return now - pad < eventStart && eventStart < now - -pad }),
-    future: events.filter(function(e) { return now - -pad < Date.create(e.timeFrom) })
+      var isToday = dateFrom <= date && (multiDay && date <= dateTo || beginningOfDay <= dateTo)
+      if(event.title == 'Northern Spark') multiDay = false
+      return includeMultiday ? isToday : !multiDay && isToday
+    })
   }
+
+  events.earlier = function(events) {
+    var now = new Date
+    return events.filter(function(e) { return Date.create(e.timeFrom) < now })
+  }
+
+  events.pastNowFuture = function(_events, pad, offset) {
+    // TODO: refactor with Date.advance(millis)
+    var now = new Date,
+        pad = (pad || 15)*60*1000, // _ minutes in ms
+        _events = _events || events(false)
+
+    return {
+      past: _events.filter(function(e) { return Date.create(e.timeFrom) < now - pad }),
+      now: _events.filter(function(e) { var eventStart = Date.create(e.timeFrom); return now - pad < eventStart && eventStart < now - -pad }),
+      future: _events.filter(function(e) { return now - -pad < Date.create(e.timeFrom) })
+    }
+  }
+
+  return events
 }
 
 },{"./events":2,"sugar":4}],7:[function(require,module,exports){
