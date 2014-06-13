@@ -18603,21 +18603,24 @@ function update(events) {
 
   events.exit().remove()
 }
-
 update(events)
-if(window.location.hash != '#all') {
-  var updateLoop = setInterval(function() {
-    // update events to only include upcoming
-    var pnf = _today.pastNowFuture()
-    pnf.now.forEach(function(e) { e.now = true })
-    pnf.future.forEach(function(e) { e.future = true })
-    pnf.past.forEach(function(e) { e.past = true })
 
-    events = pnf.past.last(3).concat(pnf.now).concat(pnf.future)
-    list.classed('few', function() { return events.length < 7 })
-    update(events)
-    if(window.location.hash == '#freeze') return clearInterval(updateLoop)
-  }, 10000)
+function loop() {
+  // update events to only include upcoming
+  var pnf = _today.pastNowFuture()
+  pnf.now.forEach(function(e) { e.now = true })
+  pnf.future.forEach(function(e) { e.future = true })
+  pnf.past.forEach(function(e) { e.past = true })
+
+  events = pnf.past.last(3).concat(pnf.now).concat(pnf.future)
+  list.classed('few', function() { return events.length < 7 })
+  update(events)
+  if(window.location.hash == '#freeze') return clearInterval(updateLoop)
+}
+loop()
+
+if(window.location.hash != '#all') {
+  var updateLoop = setInterval(loop, 10000)
 }
 
 if((new Date).getDay() == 1) {
