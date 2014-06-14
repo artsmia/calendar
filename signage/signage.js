@@ -56,8 +56,9 @@ function loop() {
   pnf.future.forEach(function(e) { e.future = true })
   pnf.past.forEach(function(e) { e.past = true })
 
-  events = pnf.past.last(3).concat(pnf.now).concat(pnf.future)
-  list.classed('few', function() { return events.length < 7 })
+  var afterNow = pnf.now.concat(pnf.future)
+  events = afterNow.length > 3 ? afterNow : pnf.past.last(3).concat(afterNow)
+  list.classed('busy', function() { return events.length > 5 })
   update(events)
   if(window.location.hash == '#freeze') return clearInterval(updateLoop)
 }
