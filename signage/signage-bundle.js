@@ -18650,7 +18650,6 @@ module.exports = function(date) {
           multiDay = dateFrom - dateTo != 0
 
       var isToday = dateFrom <= date && (multiDay && date <= dateTo || beginningOfDay <= dateTo)
-      if(event.title == 'Northern Spark') multiDay = false
       return includeMultiday ? isToday : !multiDay && isToday
     })
   }
