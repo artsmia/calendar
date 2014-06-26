@@ -100,7 +100,7 @@ li h3 {
 }
 
 li h3 a{
-	font-weight:300;
+	font-weight:400;
 	color:#000;
 	text-decoration:none;
 	margin:0;
@@ -113,13 +113,14 @@ li p {
 	margin:0;
 	padding:0;
 	font-weight:600;
+  font-size: 1.5em;
 }
 
 li p span.circ {
 	border-radius:50%;
 	text-align: center;
-	width:90px;
-	height:90px;
+	width:4.25em;
+	height:4.25em;
 	float:right;
 	display:inline-block;
 	background-color:#000;
@@ -131,7 +132,7 @@ li p span.time{
 	display:inline-block;
 	padding-top:23px;
 	font-weight:600;
-	font-size:1.75em;
+	font-size:1.5em;
 	line-height:0.85em;
 }
 
@@ -141,7 +142,7 @@ li div.starts{
 	border:3px solid #666;
 	display:inline-block;
 	margin-top:15px;
-
+  font-size: 1.5em;
 }
 li div.line{
 	float:right;
