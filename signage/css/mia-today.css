@@ -19,7 +19,7 @@ height: 0;
 clear: both;
 visibility: hidden;
 }
-/* IE6 */ 
+/* IE6 */
 * html .clearfix {height: 1%;}
 /* IE7 */
 *:first-child+html .clearfix {min-height: 1px;}
@@ -90,8 +90,9 @@ li{
 	display:block;
 	padding:2em;
   margin: 1em;
-	border-top:15px solid #000;
-	background: rgba(255,255,255,.9);
+  border-top:15px solid #000;
+  background: rgba(255,255,255,.9);
+  color:#222;
 }
 
 li h3 {
@@ -101,7 +102,7 @@ li h3 {
 
 li h3 a{
 	font-weight:400;
-	color:#000;
+	color:#222;
 	text-decoration:none;
 	margin:0;
 	text-transform:uppercase;
@@ -123,7 +124,7 @@ li p span.circ {
 	height:4.25em;
 	float:right;
 	display:inline-block;
-	background-color:#000;
+	background-color:#222;
 }
 
 li p span.time{
@@ -152,45 +153,45 @@ li div.line{
 	width:30px;
 }
 /*
-@-webkit-keyframes pulse { 
-	0% {background-color: rgba(129,41,144,0.3);} 
-	14% {background-color: rgba(237,29,36,0.3);} 
-	28% {background-color: rgba(0,174,239,0.3);} 
-	42% {background-color: rgba(236,0,140,0.3);} 
+@-webkit-keyframes pulse {
+	0% {background-color: rgba(129,41,144,0.3);}
+	14% {background-color: rgba(237,29,36,0.3);}
+	28% {background-color: rgba(0,174,239,0.3);}
+	42% {background-color: rgba(236,0,140,0.3);}
 	56% {background-color: rgba(0,80,141,0.3);}
 	84% {background-color: rgba(0,0,0,0.3);}
 	100% {background-color: rgba(129,41,144,0.3);}
-} 
+}
 */
 
-@-webkit-keyframes pulse { 
-	0% {background-color: #bdbdb0;} 
-	14% {background-color: #c6cdc7;} 
-	28% {background-color: #b0a690;} 
-	42% {background-color: #bdbdb0;} 
+@-webkit-keyframes pulse {
+	0% {background-color: #bdbdb0;}
+	14% {background-color: #c6cdc7;}
+	28% {background-color: #b0a690;}
+	42% {background-color: #bdbdb0;}
 	56% {background-color: #d7d6cb;}
 	84% {background-color: #959a8f;}
 	100% {background-color: #bdbdb0;}
 
-} 
+}
 	/*body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate; }*/
-	
-	@-moz-keyframes pulse { 
-	0% {background-color: #bdbdb0;} 
-	14% {background-color: #c6cdc7;} 
-	28% {background-color: #b0a690;} 
-	42% {background-color: #bdbdb0;} 
+
+	@-moz-keyframes pulse {
+	0% {background-color: #bdbdb0;}
+	14% {background-color: #c6cdc7;}
+	28% {background-color: #b0a690;}
+	42% {background-color: #bdbdb0;}
 	56% {background-color: #d7d6cb;}
 	84% {background-color: #959a8f;}
 	100% {background-color: #bdbdb0;}
 
 }
 
-@-ms-keyframes pulse { 
-	0% {background-color: #bdbdb0;} 
-	14% {background-color: #c6cdc7;} 
-	28% {background-color: #b0a690;} 
-	42% {background-color: #bdbdb0;} 
+@-ms-keyframes pulse {
+	0% {background-color: #bdbdb0;}
+	14% {background-color: #c6cdc7;}
+	28% {background-color: #b0a690;}
+	42% {background-color: #bdbdb0;}
 	56% {background-color: #d7d6cb;}
 	84% {background-color: #959a8f;}
 	100% {background-color: #bdbdb0;}
@@ -229,14 +230,14 @@ body > #bed * {
     opacity:1;
     -webkit-filter: blur(0px);
   }
-  50% { 
+  50% {
     -webkit-filter: blur(5px);
   }
   55% {
     opacity:0;
     z-index: 0
   }
-  60% { 
+  60% {
     -webkit-filter: blur(5px);
   }
   65% {
