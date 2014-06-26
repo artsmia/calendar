@@ -282,16 +282,13 @@ ul {
   left: 5%;
 }
 
-li.future {
-  opacity: 0.99;
-}
-
-li.now {
-  opacity: 1;
+li.now, li.future {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 li.past {
   opacity: 0.7;
+  /* background: rgba(255, 255, 255, 0.7); */
 }
 
 h1 {
