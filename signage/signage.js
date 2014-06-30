@@ -10,8 +10,8 @@ var list = d3.select("body").append("ul"),
     eventHtml = require('../eventHtml'),
     bed = d3.select("body").append("div"),
     images = [
-      {url: './wells/mia_44644a-2.jpg', id: 'two'},
-      {url: './wells/mia_44638a.jpg', id: 'one'}
+      {url: './patterns/pattern-3.svg', id: 'two'},
+      {url: './patterns/pattern-3a.svg', id: 'one'}
     ]
 
 list.attr("id", "pulse")
