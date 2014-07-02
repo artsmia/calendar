@@ -10,8 +10,7 @@ var list = d3.select("body").append("ul"),
     eventHtml = require('../eventHtml'),
     bed = d3.select("body").append("div"),
     images = [
-      {url: './patterns/pattern-3.svg', id: 'two'},
-      {url: './patterns/pattern-3a.svg', id: 'one'}
+      {url: './patterns/grille-black.svg', id: 'one'}
     ]
 
 list.attr("id", "pulse")
@@ -22,9 +21,6 @@ var images = bed.selectAll("div")
     .enter()
     .append('div')
     .attr("id", function(d) { return d.id })
-    .style('background-image', function(d) {
-      return "url("+d.url+")"
-    })
 
 function update(events) {
   var events = list.selectAll("li")
