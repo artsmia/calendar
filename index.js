@@ -12,7 +12,7 @@ var x = d3.scale.linear()
   .range([0, w])
 
 var y = d3.scale.linear()
-  .domain([0, cal.instances.length])
+  .domain([0, cal.length])
   .range([0, h])
 
 var typeColor = {
@@ -36,7 +36,7 @@ var div = d3.select("body").append("div")
   .style("opacity", 0);
 
 var instances = svg.selectAll('.instance')
-    .data(cal.instances)
+    .data(cal)
   .enter().append('rect')
     .attr("class", "instance")
     .attr("x", function(d) { return x(d.dateFrom) })

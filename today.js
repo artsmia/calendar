@@ -10,7 +10,7 @@ module.exports = function(date) {
   var events = function (includeMultiday) {
     var includeMultiday = (typeof includeMultiday != 'undefined') ? includeMultiday : true
 
-    return cal.instances.filter(function(event) {
+    return cal.filter(function(event) {
       var dateFrom = new Date(event.dateFrom*1000),
           dateTo = new Date(event.dateTo*1000),
           multiDay = dateFrom - dateTo != 0
