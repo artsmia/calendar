@@ -5,7 +5,12 @@ calendar:
 		grep calModel | \
 		sed 's/var calModel = //' | \
 		sed 's/;$$//' | \
-		jq '.' > calendar.json
+		jq '.instances' > calendar.json
+
+	cat full-calendar.json calendar.json | \
+		jq '.[]' | \
+		jq -s 'unique_by(.id, .dateFrom, .timeFrom) | sort_by("\(.dateFrom)-\(.timeFrom)-\(.title)-\(.id)")' > new-full-calendar.json
+	mv {new-,}full-calendar.json
 
 build:
 	browserify -t brfs index.js -o bundle.js
@@ -14,8 +19,3 @@ build:
 by_date:
 	@cat calendar.json | jq '.instances | group_by(.dateFrom) | map({length: .|length, event: map(.title+" -- "+.dateDisplay)})'
 
-full-calendar:
-	@git log -n100 --pretty=oneline --abbrev-commit calendar.json | cut -d ' ' -f1 | while read commit; do \
-		git show $$commit:calendar.json | jq -c -r '.instances | .[]'; \
-	done \
-	| jq -s 'unique_by(.id, .dateFrom, .timeFrom) | sort_by("\(.dateFrom)-\(.timeFrom)-\(.title)-\(.id)")' > full-calendar.json
