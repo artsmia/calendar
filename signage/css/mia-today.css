@@ -190,16 +190,14 @@ body > #bed * {
 
 #bed *, h1 {
   animation-name: opacity;
-  -webkit-animation-name: opacity;
+  /* -webkit-animation-name: opacity; */
   animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
+  /* -webkit-animation-timing-function: ease-in-out; */
   animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  animation-duration: 30s;
-  -webkit-animation-duration: 30s;
-  /* animation-direction: alternate; */
-  /* -webkit-animation-direction: alternate; */
-  -webkit-animation-delay: -20s;
+  /* -webkit-animation-iteration-count: infinite; */
+  animation-duration: 345s;
+  /* -webkit-animation-duration: 345s; */
+  animation-delay: -333s;
 }
 
 ul {
