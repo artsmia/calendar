@@ -152,96 +152,6 @@ li div.line{
   margin-top:30px;
   width:30px;
 }
-/*
-@-webkit-keyframes pulse {
-<<<<<<< HEAD
-	0% {background-color: rgba(129,41,144,0.3);}
-	14% {background-color: rgba(237,29,36,0.3);}
-	28% {background-color: rgba(0,174,239,0.3);}
-	42% {background-color: rgba(236,0,140,0.3);}
-	56% {background-color: rgba(0,80,141,0.3);}
-	84% {background-color: rgba(0,0,0,0.3);}
-	100% {background-color: rgba(129,41,144,0.3);}
-}
-*/
-
-@-webkit-keyframes pulse {
-	0% {background-color: #bdbdb0;}
-	14% {background-color: #c6cdc7;}
-	28% {background-color: #b0a690;}
-	42% {background-color: #bdbdb0;}
-	56% {background-color: #d7d6cb;}
-	84% {background-color: #959a8f;}
-	100% {background-color: #bdbdb0;}
-
-}
-	/*body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate; }*/
-
-	@-moz-keyframes pulse {
-	0% {background-color: #bdbdb0;}
-	14% {background-color: #c6cdc7;}
-	28% {background-color: #b0a690;}
-	42% {background-color: #bdbdb0;}
-	56% {background-color: #d7d6cb;}
-	84% {background-color: #959a8f;}
-	100% {background-color: #bdbdb0;}
-=======
-0% {background-color: rgba(129,41,144,0.3);}
-14% {background-color: rgba(237,29,36,0.3);}
-28% {background-color: rgba(0,174,239,0.3);}
-42% {background-color: rgba(236,0,140,0.3);}
-56% {background-color: rgba(0,80,141,0.3);}
-84% {background-color: rgba(0,0,0,0.3);}
-100% {background-color: rgba(129,41,144,0.3);}
-}
- */
-
-@-webkit-keyframes pulse {
-  0% {background-color: #bdbdb0;}
-  14% {background-color: #c6cdc7;}
-  28% {background-color: #b0a690;}
-  42% {background-color: #bdbdb0;}
-  56% {background-color: #d7d6cb;}
-  84% {background-color: #959a8f;}
-  100% {background-color: #bdbdb0;}
-
-}
-/*body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate; }*/
-
-@-moz-keyframes pulse {
-  0% {background-color: #bdbdb0;}
-  14% {background-color: #c6cdc7;}
-  28% {background-color: #b0a690;}
-  42% {background-color: #bdbdb0;}
-  56% {background-color: #d7d6cb;}
-  84% {background-color: #959a8f;}
-  100% {background-color: #bdbdb0;}
->>>>>>> f673fb6... Force 2 spaces
-
-}
-
-@-ms-keyframes pulse {
-<<<<<<< HEAD
-	0% {background-color: #bdbdb0;}
-	14% {background-color: #c6cdc7;}
-	28% {background-color: #b0a690;}
-	42% {background-color: #bdbdb0;}
-	56% {background-color: #d7d6cb;}
-	84% {background-color: #959a8f;}
-	100% {background-color: #bdbdb0;}
-=======
-  0% {background-color: #bdbdb0;}
-  14% {background-color: #c6cdc7;}
-  28% {background-color: #b0a690;}
-  42% {background-color: #bdbdb0;}
-  56% {background-color: #d7d6cb;}
-  84% {background-color: #959a8f;}
-  100% {background-color: #bdbdb0;}
->>>>>>> f673fb6... Force 2 spaces
-
-}
-
-/* body { background-color: rgba(129,41,144,0.3); -webkit-animation: pulse 60s infinite alternate;-moz-animation: pulse 60s infinite alternate;-ms-animation: pulse 60s infinite alternate;} */
 
 body > #bed * {
   /* background-size: cover; */
@@ -251,44 +161,13 @@ body > #bed * {
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: 33%;
 }
 
 #bed #one {
-  background-image: url(../62553.jpg);
+  background-image: url(../patterns/grille-black.svg);
+  background-color: #333;
   z-index: 1;
-}
-
-#bed #two {
-  background-image: url(../wells/mia_44638a.jpg);
-  background-size: cover;
-  z-index: 0;
-}
-
-@-webkit-keyframes blurAndFade {
-  0% {
-    opacity:1;
-    z-index: 1;
-  }
-  45% {
-    opacity:1;
-    -webkit-filter: blur(0px);
-  }
-  50% {
-    -webkit-filter: blur(5px);
-  }
-  55% {
-    opacity:0;
-    z-index: 0
-  }
-  60% {
-    -webkit-filter: blur(5px);
-  }
-  65% {
-    -webkit-filter: blur(0px);
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 #bed {
@@ -299,22 +178,26 @@ body > #bed * {
   height: 100%;
 }
 
-#bed * {
-  animation-name: blurAndFade;
-  -webkit-animation-name: blurAndFade;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  animation-duration: 345s;
-  -webkit-animation-duration: 345s;
-  animation-direction: alternate;
-  -webkit-animation-direction: alternate;
-} /* http://css3.bradshawenterprises.com/cfimg/#cfimg3 */
+@-webkit-keyframes opacity {
+  0% { -webkit-filter: invert(0%) blur(0); }
+  35% { -webkit-filter: blur(0); }
+  40% { -webkit-filter: invert(0%) blur(0) }
+  45% { -webkit-filter: blur(1px); }
+  50% { -webkit-filter: invert(88%) blur(0); }
+  90% { -webkit-filter: invert(88%) blur(0); }
+  95% { -webkit-filter: invert(10%) blur(1px); }
+}
 
-#bed #two {
-  animation-delay: -345s;
-  -webkit-animation-delay: -345s;
+#bed *, h1 {
+  animation-name: opacity;
+  /* -webkit-animation-name: opacity; */
+  animation-timing-function: ease-in-out;
+  /* -webkit-animation-timing-function: ease-in-out; */
+  animation-iteration-count: infinite;
+  /* -webkit-animation-iteration-count: infinite; */
+  animation-duration: 345s;
+  /* -webkit-animation-duration: 345s; */
+  animation-delay: -333s;
 }
 
 ul {
