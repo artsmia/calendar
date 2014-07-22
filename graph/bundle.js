@@ -28,8 +28,8 @@ module.exports = cal
 
 
 },{}],3:[function(require,module,exports){
-var cal = require('./events')
-var today = require('./today')
+var cal = require('../events')
+var today = require('../today')
 var d3 = require('d3')
 
 window.d3 = d3
@@ -55,7 +55,7 @@ var typeColor = {
   "exhibitions": "chartreuse"
 }
 
-var eventHtml = require('./eventHtml.js')
+var eventHtml = require('../eventHtml.js')
 
 var svg = d3.select("body").append("svg")
   .attr("width", w)
@@ -86,7 +86,7 @@ window.api = {
   today: today
 }
 
-},{"./eventHtml.js":1,"./events":2,"./today":6,"d3":4}],4:[function(require,module,exports){
+},{"../eventHtml.js":1,"../events":2,"../today":6,"d3":4}],4:[function(require,module,exports){
 !function() {
   var d3 = {
     version: "3.4.3"

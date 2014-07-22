@@ -1,5 +1,5 @@
-var cal = require('./events')
-var today = require('./today')
+var cal = require('../events')
+var today = require('../today')
 var d3 = require('d3')
 
 window.d3 = d3
@@ -25,7 +25,7 @@ var typeColor = {
   "exhibitions": "chartreuse"
 }
 
-var eventHtml = require('./eventHtml.js')
+var eventHtml = require('../eventHtml.js')
 
 var svg = d3.select("body").append("svg")
   .attr("width", w)

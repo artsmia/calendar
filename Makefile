@@ -13,7 +13,7 @@ calendar:
 	mv {new-,}full-calendar.json
 
 build:
-	browserify -t brfs index.js -o bundle.js
+	browserify -t brfs graph/index.js -o graph/bundle.js
 	browserify -t brfs signage/signage.js -o signage/signage-bundle.js
 
 by_date:
