@@ -251,3 +251,7 @@ aside#closed {
   width: 90%;
   overflow-y: hidden;
 }
+
+li.art-out-of-the-box, li.art-in-the-park {
+  display: none;
+}

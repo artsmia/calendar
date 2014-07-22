@@ -38,6 +38,7 @@ function update(events) {
       .classed("clearfix", true)
       .attr('class', function(d) {
         this.classList.add(d.typeCategory)
+        this.classList.add(d.typeSlug)
         return this.classList.toString()
       })
 
