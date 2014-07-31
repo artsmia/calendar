@@ -12,6 +12,10 @@ calendar:
 		jq -s 'unique_by(.id, .dateFrom, .timeFrom) | sort_by("\(.dateFrom)-\(.timeFrom)-\(.title)-\(.id)")' > new-full-calendar.json
 	mv {new-,}full-calendar.json
 
+	cat full-calendar.json calendar.json | \
+		jq '.[]' | \
+		jq -s -c 'unique_by(.id, .dateFrom, .timeFrom) | sort_by("\(.dateFrom)-\(.timeFrom)-\(.title)-\(.id)") | .[]' > full-line-delimited-calendar.json
+
 build:
 	browserify -t brfs graph/index.js -o graph/bundle.js
 	browserify -t brfs signage/signage.js -o signage/signage-bundle.js
