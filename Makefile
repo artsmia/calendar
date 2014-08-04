@@ -18,7 +18,7 @@ calendar:
 
 build:
 	browserify -t brfs graph/index.js -o graph/bundle.js
-	browserify -t brfs signage/signage.js -o signage/signage-bundle.js
+	browserify -t brfs today/signage.js -o today/signage-bundle.js
 
 by_date:
 	@cat calendar.json | jq 'group_by(.dateFrom) | map({length: .|length, event: map(.title+" -- "+.dateDisplay)})'
