@@ -29,6 +29,7 @@ var eventHtml = require('../eventHtml.js')
 
 var svg = d3.select("body").append("svg")
   .attr("width", w)
+  .attr("height", cal.length*5 + "px")
   .attr("class", "timeline")
 
 var div = d3.select("body").append("div")
