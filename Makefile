@@ -1,7 +1,7 @@
 default: calendar build
 
 calendar:
-	curl http://new.artsmia.org/visit/plan-your-trip/calendar-and-events/ | \
+	curl http://new.artsmia.org/visit/calendar/ | \
 		grep calModel | \
 		sed 's/var calModel = //' | \
 		sed 's/;$$//' | \
