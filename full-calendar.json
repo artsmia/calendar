@@ -27,23 +27,24 @@
     "id": 17173,
     "title": "Gown of Cloud &amp; Rainbow: Miao Costumes &amp; Jewelry from China",
     "permalink": "http://new.artsmia.org/exhibition/gown-of-cloud-rainbow-miao-costumes-jewelry-from-china/",
-    "location": "Adjacent to Wu Family Reception Hall",
+    "location": "Adjacent to Wu Family Reception Hall (G218)",
     "cost": "Free Exhibition",
     "typeSlug": "exhibition",
     "typeCategory": "exhibitions",
     "typeName": "Exhibition",
     "dateFrom": 1370062800,
-    "dateTo": 1400994000,
+    "dateTo": 1424584800,
     "timeFrom": "12:00 am",
-    "dateDisplay": "June 1, 2013 - May 25, 2014",
+    "dateDisplay": "June 1, 2013 - February 22, 2015",
     "image": "<img width=\"400\" height=\"320\" src=\"http://new.artsmia.org/wp-content/uploads/2013/08/gown_of_cloud_and_rainbow.jpg\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"2004.67.58\" />",
     "imageUrl": "http://new.artsmia.org/wp-content/uploads/2013/08/gown_of_cloud_and_rainbow-385x231.jpg",
     "imageAlt": "",
     "ongoing": true,
     "excerpt": "",
-    "prominence": "medium",
-    "teaser": false,
-    "multiple": 0
+    "multiple": 0,
+    "fromStamp": 1370062800,
+    "toStamp": 1424584800,
+    "prominence": "small"
   },
   {
     "id": 21533,
@@ -309,17 +310,17 @@
     "typeCategory": "exhibitions",
     "typeName": "Exhibition",
     "dateFrom": 1393653600,
-    "dateTo": 1414904400,
+    "dateTo": 1427605200,
     "timeFrom": "12:00 am",
-    "dateDisplay": "March 1 - November 2, 2014",
+    "dateDisplay": "March 1, 2014 - March 29, 2015",
     "image": "<img width=\"1024\" height=\"652\" src=\"http://new.artsmia.org/wp-content/uploads/2014/03/mia_40346a_Crop.jpg\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"Detail, The Exalted Emperors and the Gods of the Five Directions\nMing dynasty (1368-1644), 16th century\nInk, colors, and gold on silk\nThe Ruth Ann Dayton Chinese Room Endowment Fund\n2004.131.3\" />",
     "imageUrl": "http://new.artsmia.org/wp-content/uploads/2014/03/mia_40346a_Crop-385x231.jpg",
     "imageAlt": "",
     "ongoing": true,
-    "excerpt": false,
+    "excerpt": "",
     "multiple": 0,
     "fromStamp": 1393653600,
-    "toStamp": 1414904400,
+    "toStamp": 1427605200,
     "prominence": "small"
   },
   {
@@ -5710,7 +5711,7 @@
     "imageUrl": null,
     "imageAlt": false,
     "ongoing": true,
-    "excerpt": false,
+    "excerpt": "",
     "multiple": 0,
     "fromStamp": 1402549200,
     "toStamp": 1414299600,
@@ -17033,7 +17034,7 @@
     "id": 17167,
     "title": "Visions from the Forests: The Art of Liberia and Sierra Leone",
     "permalink": "http://new.artsmia.org/exhibition/visions-from-the-forests-the-art-of-liberia-and-sierra-leone/",
-    "location": "U.S. Bank Gallery",
+    "location": "U.S. Bank Gallery (G257)",
     "cost": "Free Exhibition",
     "typeSlug": "exhibition",
     "typeCategory": "exhibitions",
@@ -17046,7 +17047,7 @@
     "imageUrl": "http://new.artsmia.org/wp-content/uploads/2013/08/visions-e1395936937290-385x231.jpg",
     "imageAlt": "",
     "ongoing": true,
-    "excerpt": false,
+    "excerpt": "",
     "multiple": 0,
     "fromStamp": 1411189200,
     "toStamp": 1423375200,
@@ -17386,7 +17387,7 @@
     "id": 28387,
     "title": "Make It New, Again: Collecting History",
     "permalink": "http://new.artsmia.org/exhibition/make-it-new-again-collecting-history/",
-    "location": "Harrison Photography Gallery",
+    "location": "Harrison Photography Gallery (G365)",
     "cost": "Free Exhibition",
     "typeSlug": "exhibition",
     "typeCategory": "exhibitions",
@@ -19068,7 +19069,7 @@
     "dateFrom": 1413435600,
     "dateTo": 1413435600,
     "timeFrom": "1:00 pm",
-    "dateDisplay": "Thursday, October 16 at 1:00 pm",
+    "dateDisplay": "Today, October 16, 2014 at 1:00 pm",
     "image": "",
     "imageUrl": null,
     "imageAlt": false,
@@ -19090,7 +19091,7 @@
     "dateFrom": 1413435600,
     "dateTo": 1413435600,
     "timeFrom": "6:00 pm",
-    "dateDisplay": "Thursday, October 16 at 6:00 pm",
+    "dateDisplay": "Today, October 16, 2014 at 6:00 pm",
     "image": "",
     "imageUrl": null,
     "imageAlt": false,
@@ -19156,7 +19157,7 @@
     "dateFrom": 1413435600,
     "dateTo": 1413435600,
     "timeFrom": "6:30 pm",
-    "dateDisplay": "Thursday, October 16 at 6:30 pm",
+    "dateDisplay": "Today, October 16, 2014 at 6:30 pm",
     "image": "",
     "imageUrl": null,
     "imageAlt": false,
@@ -19740,6 +19741,50 @@
     "toStamp": 1414180800
   },
   {
+    "id": 35624,
+    "title": "Film: Men of the Cloth",
+    "permalink": "http://new.artsmia.org/event/film-men-of-the-cloth/",
+    "location": "Pillsbury Auditorium",
+    "cost": "Free",
+    "typeSlug": "film",
+    "typeCategory": "film-and-performance",
+    "typeName": "Film",
+    "dateFrom": 1414126800,
+    "dateTo": 1414126800,
+    "timeFrom": "3:00 pm",
+    "dateDisplay": "Friday, October 24 at 3:00 pm",
+    "image": "<img width=\"3413\" height=\"2560\" src=\"http://new.artsmia.org/wp-content/uploads/2014/10/MenoftheCloth_master-tailor-Joe-Centofanti.jpg\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"Men of the Cloth Master tailor Joe Centofanti\" />",
+    "imageUrl": "http://new.artsmia.org/wp-content/uploads/2014/10/MenoftheCloth_master-tailor-Joe-Centofanti-385x231.jpg",
+    "imageAlt": "",
+    "ongoing": false,
+    "excerpt": false,
+    "multiple": 0,
+    "fromStamp": 1414180800,
+    "toStamp": 1414187100
+  },
+  {
+    "id": 35342,
+    "title": "Italian Style: Member Preview Day",
+    "permalink": "http://new.artsmia.org/event/italian-style-member-preview-day/",
+    "location": "Target Galleries",
+    "cost": "Free for Members",
+    "typeSlug": "special-event",
+    "typeCategory": "special-events",
+    "typeName": "Special Event",
+    "dateFrom": 1414213200,
+    "dateTo": 1414213200,
+    "timeFrom": "10:00 am",
+    "dateDisplay": "Saturday, October 25 at 10:00 am",
+    "image": "",
+    "imageUrl": null,
+    "imageAlt": false,
+    "ongoing": false,
+    "excerpt": false,
+    "multiple": 0,
+    "fromStamp": 1414249200,
+    "toStamp": 1414274400
+  },
+  {
     "id": 34187,
     "title": "Sketching in the Galleries: Exploring Implied Space—Linear Perspective",
     "permalink": "http://new.artsmia.org/event/sketching-in-the-galleries-exploring-implied-space-linear-perspective/",
@@ -19939,7 +19984,7 @@
   },
   {
     "id": 34775,
-    "title": "Italian Style Exhibition Preview",
+    "title": "Italian Style: Preview Party",
     "permalink": "http://new.artsmia.org/event/italian-style-exhibition-preview/",
     "location": "",
     "cost": "$25 each ($20 for members)",
@@ -19976,11 +20021,13 @@
     "imageUrl": "http://new.artsmia.org/wp-content/uploads/2014/02/Ferra-Ad-e1395944456162-348x231.jpg",
     "imageAlt": "",
     "ongoing": true,
-    "excerpt": "",
+    "excerpt": "<p>Trace the evolution of Italian design, from Gucci and Prada to Missoni, Versace and more. A major retrospective of the fashion that has defined a nation—and a rare chance to see Milan’s finest in Minneapolis.</p>\n",
     "multiple": 0,
     "fromStamp": 1414299600,
     "toStamp": 1420351200,
-    "prominence": "small"
+    "prominence": "large",
+    "masthead": "<img src='http://new.artsmia.org/wp-content/uploads/2013/05/HP-cover.png' />",
+    "displayTicketsLink": true
   },
   {
     "id": 22217,
@@ -20090,7 +20137,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414355400,
-    "toStamp": 1414359000
+    "toStamp": 1414359000,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 34970,
@@ -20178,7 +20227,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414522800,
-    "toStamp": 1414526400
+    "toStamp": 1414526400,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 22217,
@@ -20200,7 +20251,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414605600,
-    "toStamp": 1414609200
+    "toStamp": 1414609200,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 35212,
@@ -20222,7 +20275,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414609200,
-    "toStamp": 1414612800
+    "toStamp": 1414612800,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 22217,
@@ -20244,7 +20299,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414692000,
-    "toStamp": 1414695600
+    "toStamp": 1414695600,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 35212,
@@ -20266,7 +20323,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414695600,
-    "toStamp": 1414699200
+    "toStamp": 1414699200,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 17016,
@@ -20311,6 +20370,30 @@
     "multiple": 0,
     "fromStamp": 1414710000,
     "toStamp": 1414717200
+  },
+  {
+    "id": 32590,
+    "title": "Third Thursday: Nerd Thursday",
+    "permalink": "http://new.artsmia.org/event/third-thursday-nerd-thursday-2/",
+    "location": "Reception Hall, Target Wing",
+    "cost": "FREE; refreshments for sale",
+    "typeSlug": "third-thursday",
+    "typeCategory": "special-events",
+    "typeName": "Third Thursday",
+    "dateFrom": 1414645200,
+    "dateTo": 1414645200,
+    "timeFrom": "6:00 pm",
+    "dateDisplay": "Thursday, October 30 at 6:00 pm",
+    "image": "",
+    "imageUrl": null,
+    "imageAlt": false,
+    "ongoing": false,
+    "excerpt": false,
+    "multiple": 0,
+    "fromStamp": 1414710000,
+    "toStamp": 1414720800,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 17009,
@@ -20376,7 +20459,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414713600,
-    "toStamp": 1414717200
+    "toStamp": 1414717200,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 35212,
@@ -20398,7 +20483,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414713600,
-    "toStamp": 1414717200
+    "toStamp": 1414717200,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 22217,
@@ -20442,7 +20529,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414782000,
-    "toStamp": 1414785600
+    "toStamp": 1414785600,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 30800,
@@ -20464,7 +20553,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1414854000,
-    "toStamp": 1414872000
+    "toStamp": 1414872000,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 34186,
@@ -20552,7 +20643,33 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1415463300,
-    "toStamp": 1415474100
+    "toStamp": 1415474100,
+    "masthead": "",
+    "displayTicketsLink": false
+  },
+  {
+    "id": 35621,
+    "title": "MAEP Annual Meeting",
+    "permalink": "http://new.artsmia.org/event/maep-annual-meeting-3/",
+    "location": "Wells Fargo Community Room",
+    "cost": "FREE",
+    "typeSlug": "special-event",
+    "typeCategory": "special-events",
+    "typeName": "Special Event",
+    "dateFrom": 1415426400,
+    "dateTo": 1415426400,
+    "timeFrom": "10:30 am",
+    "dateDisplay": "Saturday, November 8 at 10:30 am",
+    "image": "<img width=\"640\" height=\"427\" src=\"http://new.artsmia.org/wp-content/uploads/2014/10/14290824642_f55425c1a5_z.jpg\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"Amy  Toscani, Honey Bear, 2014\" />",
+    "imageUrl": "http://new.artsmia.org/wp-content/uploads/2014/10/14290824642_f55425c1a5_z-385x231.jpg",
+    "imageAlt": "",
+    "ongoing": false,
+    "excerpt": false,
+    "multiple": 0,
+    "fromStamp": 1415464200,
+    "toStamp": 1415473200,
+    "masthead": "<img width=\"640\" height=\"427\" src=\"http://new.artsmia.org/wp-content/uploads/2014/10/14290824642_f55425c1a5_z.jpg\" class=\"attachment-masthead wp-post-image\" alt=\"Amy  Toscani, Honey Bear, 2014\" />",
+    "displayTicketsLink": false
   },
   {
     "id": 30794,
@@ -20596,7 +20713,33 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1415471400,
-    "toStamp": 1415476800
+    "toStamp": 1415476800,
+    "masthead": "",
+    "displayTicketsLink": false
+  },
+  {
+    "id": 35540,
+    "title": "West African Rhythms",
+    "permalink": "http://new.artsmia.org/event/west-african-rhythms/",
+    "location": "Museum-wide",
+    "cost": "Free",
+    "typeSlug": "family-day",
+    "typeCategory": "family-events",
+    "typeName": "Family Day",
+    "dateFrom": 1415512800,
+    "dateTo": 1415512800,
+    "timeFrom": "11:00 am",
+    "dateDisplay": "Sunday, November 9 at 11:00 am",
+    "image": "",
+    "imageUrl": null,
+    "imageAlt": false,
+    "ongoing": false,
+    "excerpt": false,
+    "multiple": 0,
+    "fromStamp": 1415552400,
+    "toStamp": 1415574000,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 30203,
@@ -20640,7 +20783,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1415982600,
-    "toStamp": 1415986200
+    "toStamp": 1415986200,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 30798,
@@ -20662,7 +20807,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1416067200,
-    "toStamp": 1416074400
+    "toStamp": 1416074400,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 34184,
@@ -20706,7 +20853,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1416069000,
-    "toStamp": 1416072600
+    "toStamp": 1416072600,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 32250,
@@ -20816,7 +20965,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1417204800,
-    "toStamp": 1417212000
+    "toStamp": 1417212000,
+    "masthead": "<img width=\"480\" height=\"270\" src=\"http://new.artsmia.org/wp-content/uploads/2014/08/V-with-red-dress-6A.jpg\" class=\"attachment-masthead wp-post-image\" alt=\"Valentino: The Last Emperor\" />",
+    "displayTicketsLink": false
   },
   {
     "id": 32244,
@@ -20860,7 +21011,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1417737600,
-    "toStamp": 1417746600
+    "toStamp": 1417746600,
+    "masthead": "<img width=\"380\" height=\"400\" src=\"http://new.artsmia.org/wp-content/uploads/2014/09/image002.jpg\" class=\"attachment-masthead wp-post-image\" alt=\"Bronze\n1955\n\nPhilip Guston\n(United States, North America)\nOil on canvas\n76 x 72 in. (193.0 x 182.9 cm)\" />",
+    "displayTicketsLink": false
   },
   {
     "id": 35170,
@@ -20882,7 +21035,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1418317200,
-    "toStamp": 1418320800
+    "toStamp": 1418320800,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 17018,
@@ -20904,7 +21059,9 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1418401800,
-    "toStamp": 1418405400
+    "toStamp": 1418405400,
+    "masthead": "",
+    "displayTicketsLink": false
   },
   {
     "id": 17018,
@@ -20926,6 +21083,8 @@
     "excerpt": false,
     "multiple": 0,
     "fromStamp": 1418488200,
-    "toStamp": 1418488200
+    "toStamp": 1418488200,
+    "masthead": "",
+    "displayTicketsLink": false
   }
 ]
