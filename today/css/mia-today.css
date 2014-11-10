@@ -229,8 +229,8 @@ h1 {
   left: 0;
   text-align: center;
   padding: 0.15em;
-  background: url(../today.svg) no-repeat 50% 50%;
-  text-indent: -100em;
+  background: url(../today.svg) no-repeat 7% 50%;
+  text-indent: 7em;
 }
 
 aside#closed {

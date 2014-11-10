@@ -58,6 +58,11 @@ function loop() {
   list.classed('busy', function() { return events.length > 5 })
   update(events)
   if(window.location.hash == '#freeze') return clearInterval(updateLoop)
+
+  var hhmm = (new Date).toTimeString().split(':').slice(0, 2),
+    hours = hhmm[0],
+    minutes = hhmm[1]
+  d3.select('h1').html([hours%12, minutes].join(':'))
 }
 loop()
 
