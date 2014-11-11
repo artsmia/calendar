@@ -18662,7 +18662,8 @@ function loop() {
   var hhmm = (new Date).toTimeString().split(':').slice(0, 2),
     hours = hhmm[0],
     minutes = hhmm[1]
-  d3.select('h1').html([hours%12, minutes].join(':'))
+  if(hours > 12) hours = hours%12
+  d3.select('h1').html([hours, minutes].join(':'))
 }
 loop()
 
