@@ -220,7 +220,7 @@ li.past {
 
 h1 {
   box-sizing: border-box;
-  font-size: 700%;
+  font-size: 600%;
   z-index: 5;
   color: white;
   width: 100%;
@@ -229,7 +229,7 @@ h1 {
   left: 0;
   text-align: center;
   padding: 0.15em;
-  background: url(../today.svg) no-repeat 7% 50%;
+  background: url(../today.svg) no-repeat 17% 50%;
   text-indent: 7em;
 }
 
