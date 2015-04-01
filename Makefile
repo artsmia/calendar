@@ -23,3 +23,9 @@ build:
 by_date:
 	@cat calendar.json | jq 'group_by(.dateFrom) | map({date: .[0].dateDisplay | split(" at")[0], length: .|length, event: map(.title+" -- "+(.dateDisplay | split("at ") | reverse | .[0]))})'
 
+commit:
+	git add calendar.json full-calendar.json full-line-delimited-calendar.json graph/bundle.js today/signage-bundle.js
+	git commit --author="miabot <null+github@artsmia.org>"
+
+refreshLobbyScreen:
+	ssh today "sh ./restart-chromium.sh"
