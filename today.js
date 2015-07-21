@@ -1,7 +1,7 @@
 require('sugar')
-var cal = require('./events')
+var getCalendar = require('./events')
 
-module.exports = function(date) {
+var eventsPerDay = function(cal, date) {
   var date = date || new Date(),
       msPerDay = 60*24*60 * 1000,
       beginningOfDay = date - (date % msPerDay),
@@ -39,4 +39,13 @@ module.exports = function(date) {
   }
 
   return events
+}
+
+module.exports = function(callback) {
+  getCalendar(function(err, events) {
+    callback(null, {
+      events: events,
+      today: eventsPerDay,
+    })
+  })
 }
