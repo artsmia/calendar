@@ -1,5 +1,5 @@
 var nets = require('nets')
-var url = 'https://artsmia.github.io/calendar/calendar.json'
+var url = 'http://new.artsmia.org/calendar-for-robots/'
 
 module.exports = function(callback) {
   nets({url: url, encoding: 'utf8'}, function(err, resp, body) {
