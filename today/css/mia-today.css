@@ -105,10 +105,8 @@ li h3 a{
   color:#222;
   text-decoration:none;
   margin:0;
-  text-transform:uppercase;
+  font-family: MiaGrotesk-Bold;
 }
-
-
 
 li p {
   margin:0;
@@ -127,14 +125,18 @@ li p span.circ {
   background-color:#222;
 }
 
+li p strong {
+  font-size: 1.5em;
+}
+
 li p span.time{
   /*color:#ed1d24;*/
   color:#fff;
   display:inline-block;
-  padding-top:23px;
+  padding-top:25px;
   font-weight:600;
-  font-size:1.5em;
-  line-height:0.85em;
+  font-size:1.75rem;
+  line-height:1em;
 }
 
 li div.starts{
@@ -142,14 +144,14 @@ li div.starts{
   padding:0.35em 0.5em;
   border:3px solid #666;
   display:inline-block;
-  margin-top:15px;
   font-size: 1.5em;
+  margin-top: -10px;
 }
 li div.line{
   float:right;
   border-top:3px solid #666;
   display:inline-block;
-  margin-top:30px;
+  margin-top:15px;
   width:30px;
 }
 
@@ -220,18 +222,17 @@ li.past {
 
 h1 {
   box-sizing: border-box;
-  font-size: 600%;
+  font-size: 777%;
+  background: url(../today.svg) no-repeat 20% 43%;
+  background-size: 49%;
   font-weight:500;
   z-index: 5;
   color: white;
-  width: 100%;
   position: relative;
-  top: 0.75em;
+  top: 0.5em;
   left: 0;
-  text-align: center;
-  padding: 0.15em;
-  background: url(../today.svg) no-repeat 20% 50%;
-  text-indent: 6.5em;
+  width: 90%;
+  text-align: right;
 }
 
 aside#closed {
