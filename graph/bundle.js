@@ -10,6 +10,10 @@ module.exports = function(d, excludeDate) {
     }).join(" — ")
     , relativeTime = Date.create(d.timeFrom).relative()
 
+  if(d.title.match("Delacroix's Influence:")) {
+    d.typeName = "Tour meets in Gallery 230"
+  }
+
   return "<h3><a href='"+d.permalink+"'>"+d.title+"</a></h3>" +
     "<p>"+d.typeName+" <span class='circ'><span class='time'>"+d.timeFrom+" "+(excludeDate ? '' : dateString)+"</span></span></p>" +
     "<div class='line'></div><div class='starts'>"+relativeTime+"</div>"
