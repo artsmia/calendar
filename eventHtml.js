@@ -12,6 +12,9 @@ module.exports = function(d, excludeDate) {
   if(d.title.match("Delacroix's Influence:")) {
     d.typeName = "Tour meets in Gallery 230"
   }
+  if(d.title.match("Winterlights at the Purcell-Cutts House")) {
+    d.typeName = "Tickets required, meet at 3rd Av entrance 20 minutes early"
+  }
 
   return "<h3><a href='"+d.permalink+"'>"+d.title+"</a></h3>" +
     "<p><strong>"+d.typeName+"</strong> <span class='circ'><span class='time'>"+d.timeFrom+" "+(excludeDate ? '' : dateString)+"</span></span></p>" +
