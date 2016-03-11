@@ -27,5 +27,8 @@ commit:
 	git add calendar.json full-calendar.json full-line-delimited-calendar.json graph/bundle.js today/signage-bundle.js
 	git commit --author="miabot <null+github@artsmia.org>" -m "$$(date +%Y-%m-%d): $$(git diff --cached full-line-delimited-calendar.json | grep '^+' | wc -l | sed 's/ //g') changed"; \
 
+deploy:
+	scp today/signage-bundle.js today:calendar/today/
+
 refreshLobbyScreen:
 	ssh today "sh ./restart-chromium.sh"
