@@ -6,6 +6,14 @@ body{
   color:#222;
   background-color: #fff;
   overflow-x:hidden;
+  width: 90%;
+  margin: 1em auto;
+  font-size: 2em;
+}
+@media screen and (min-width:67em) {
+  body {
+    font-size: 3em;
+  }
 }
 
 /*#pulse{width:100%;height:100%;background:rgba(129,41,144,0.3);margin:0 auto;padding:0;overflow:visible;}*/
@@ -24,84 +32,18 @@ body{
 /* IE7 */
 *:first-child+html .clearfix {min-height: 1px;}
 
-/***  event colors  ***/
-
-.film-performance{
-  border-color:#812990;
-}
-
-.special-event, .special-events {
-  border-color:#ed1d24;
-}
-
-.lecture-seminar, .lectures-and-seminars {
-  border-color:#00aeef;
-}
-
-.class{
-  border-color:#ec008c;
-}
-
-.tour, .tours{
-  border-color:#00b48d;
-}
-
-.exhibition{
-  border-color:#000000;
-}
-
-.family-event{
-  border-color:#f58220;
-}
-
-/***  brand colors  ***/
-
-.red {
-  color: #b7121a;
-}
-
-.orange {
-  color: #ff9900;
-}
-
-.gold {
-  color: #fecc2e;
-}
-
-.dkorange {
-  color: #ff6600;
-}
-
-.dkgreen {
-  color: #298658;
-}
-
-.blue {
-  color: #1788a3;
-}
-
-.ltgreen {
-  color: #a3c380;
-}
-
-ul{}
-
 li{
   display:block;
-  padding:2em;
-  margin: 1em;
-  border-top:15px solid #000;
-  background: rgba(255,255,255,.9);
-  color:#222;
+  padding: 0.1em 0 1em 0;
+  border-top: 1px solid #222;
 }
 
 li h3 {
-  margin-bottom:20px;
-  font-size: 3.1em;
+  /* font-size: 3.1em; */
+  margin-bottom: 0.1em;
 }
 
-li h3 a{
-  font-weight:400;
+li h3 a {
   color:#222;
   text-decoration:none;
   margin:0;
@@ -112,103 +54,13 @@ li p {
   margin:0;
   padding:0;
   font-weight:600;
-  font-size: 1.5em;
-}
-
-li p span.circ {
-  border-radius:50%;
-  text-align: center;
-  width:4.25em;
-  height:4.25em;
-  float:right;
-  display:inline-block;
-  background-color:#222;
-}
-
-li p strong {
-  font-size: 1.5em;
+  /* font-size: 2.5em; */
 }
 
 li p span.time{
-  /*color:#ed1d24;*/
-  color:#fff;
-  display:inline-block;
-  padding-top:25px;
-  font-weight:600;
-  font-size:1.75rem;
-  line-height:1em;
-}
-
-li div.starts{
-  float:right;
-  padding:0.35em 0.5em;
-  border:3px solid #666;
-  display:inline-block;
-  font-size: 1.5em;
-  margin-top: -10px;
-}
-li div.line{
-  float:right;
-  border-top:3px solid #666;
-  display:inline-block;
-  margin-top:15px;
-  width:30px;
-}
-
-body > #bed * {
-  /* background-size: cover; */
-  background-position: center center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: 33%;
-}
-
-#bed #one {
-  background-image: url(../patterns/grille-black.svg);
-  background-color: #333;
-  z-index: 1;
-}
-
-#bed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@-webkit-keyframes opacity {
-  0% { -webkit-filter: invert(0%) blur(0); }
-  35% { -webkit-filter: blur(0); }
-  40% { -webkit-filter: invert(0%) blur(0) }
-  45% { -webkit-filter: blur(1px); }
-  50% { -webkit-filter: invert(88%) blur(0); }
-  90% { -webkit-filter: invert(88%) blur(0); }
-  95% { -webkit-filter: invert(10%) blur(1px); }
-}
-
-#bed *, h1 {
-  animation-name: opacity;
-  /* -webkit-animation-name: opacity; */
-  animation-timing-function: ease-in-out;
-  /* -webkit-animation-timing-function: ease-in-out; */
-  animation-iteration-count: infinite;
-  /* -webkit-animation-iteration-count: infinite; */
-  animation-duration: 345s;
-  /* -webkit-animation-duration: 345s; */
-  animation-delay: -333s;
-}
-
-ul {
-  margin:1em auto;
-  width: 90%;
-  z-index: 11;
-  position: fixed;
-  bottom: 1%;
-  left: 5%;
+  display: block;
+  font-family: MiaGrotesk-Bold;
+  margin-top: 0.1em;
 }
 
 li.now, li.future {
@@ -222,24 +74,17 @@ li.past {
 
 h1 {
   box-sizing: border-box;
-  font-size: 777%;
-  background: url(../today.svg) no-repeat 20% 43%;
   background-size: 49%;
   font-weight:500;
   z-index: 5;
-  color: white;
-  position: relative;
-  top: 0.5em;
-  left: 0;
-  width: 90%;
-  text-align: right;
+  font-family: MiaGrotesk-Bold;
+  font-size: 2em;
 }
 
 aside#closed {
   z-index: 100;
   position: absolute;
   top: 15%;
-  font-size: 5em;
   text-align: center;
   color: white;
   width: 100%;
@@ -256,4 +101,8 @@ aside#closed {
 
 li.art-out-of-the-box, li.art-in-the-park {
   display: none;
+}
+
+#hours {
+  margin: 1em 0;
 }

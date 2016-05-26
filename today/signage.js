@@ -1,4 +1,3 @@
-require('sugar') // `Date.create('5pm')`
 var d3 = window.d3 = require('d3')
 var date = window.location.hash.match(/20\d\d/) ? new Date(window.location.hash) : new Date()
 var today = require('../today')
@@ -11,20 +10,9 @@ today(function(err, cal) {
       _today = today(events, date),
       events = _today(events, false),
       pastEvents = _today.earlier(events)
-      eventHtml = require('../eventHtml'),
-      bed = d3.select("body").append("div"),
-      images = [
-        {url: './patterns/grille-black.svg', id: 'one'}
-      ]
+      eventHtml = require('../eventHtml')
 
   list.attr("id", "pulse")
-  window.bed = bed
-  bed.attr("id", "bed")
-  var images = bed.selectAll("div")
-      .data(images)
-      .enter()
-      .append('div')
-      .attr("id", function(d) { return d.id })
 
   function update(events) {
     var events = list.selectAll("li")
@@ -65,9 +53,11 @@ today(function(err, cal) {
 
     var hhmm = (new Date).toTimeString().split(':').slice(0, 2),
       hours = hhmm[0],
-      minutes = hhmm[1]
+      minutes = hhmm[1],
+      ampm = 'am'
+    if(hours > 11) ampm = 'pm'
     if(hours > 12) hours = hours%12
-    d3.select('h1').html([hours, minutes].join(':'))
+    d3.select('h1').html([hours, minutes].join(':')+ampm)
   }
   loop()
 
@@ -75,9 +65,15 @@ today(function(err, cal) {
     var updateLoop = setInterval(loop, 10000)
   }
 
+  // TODO test this in the new layout
   if((new Date).getDay() == 1) {
     d3.select("body").append("aside")
       .html("(We're closed)")
       .attr('id', 'closed')
+  }
+
+  var currentMajorExhibitions = events.filter(event => event.typeCategory == 'exhibitions' && event.prominence == 'large')
+  if(currentMajorExhibitions.length == 0) {
+    d3.select("#hours").html('The Restaurant is closed today. Try the café!')
   }
 })

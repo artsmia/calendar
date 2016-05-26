@@ -17,6 +17,5 @@ module.exports = function(d, excludeDate) {
   }
 
   return "<h3><a href='"+d.permalink+"'>"+d.title+"</a></h3>" +
-    "<p><strong>"+d.typeName+"</strong> <span class='circ'><span class='time'>"+d.timeFrom+" "+(excludeDate ? '' : dateString)+"</span></span></p>" +
-    "<div class='line'></div><div class='starts'>"+relativeTime+"</div>"
+    "<p><strong>"+d.typeName+"</strong> <span class='time'>"+d.timeFrom+" "+(excludeDate ? '' : dateString)+"</span></p>"
 }
