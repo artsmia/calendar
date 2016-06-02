@@ -57,7 +57,7 @@ today(function(err, cal) {
       ampm = 'am'
     if(hours > 11) ampm = 'pm'
     if(hours > 12) hours = hours%12
-    d3.select('h1').html([hours, minutes].join(':')+ampm)
+    d3.select('h1').html([hours, minutes].join(':')+' '+ampm)
   }
   loop()
 

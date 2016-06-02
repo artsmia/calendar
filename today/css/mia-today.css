@@ -12,7 +12,7 @@ body{
 }
 @media screen and (min-width:67em) {
   body {
-    font-size: 5em;
+    font-size: 4em;
   }
 }
 
@@ -35,7 +35,8 @@ body{
 li{
   display:block;
   padding: 0.1em 0 1em 0;
-  border-top: 1px solid #232323;
+  border-top: 3px solid #232323;
+  font-size: 80%;
 }
 
 li h3 {
@@ -77,7 +78,7 @@ h1 {
   background-size: 49%;
   font-weight:500;
   z-index: 5;
-  font-family: MiaGrotesk-Bold;
+  font-family: MiaGrotesk-Black;
   font-size: 2em;
 }
 
