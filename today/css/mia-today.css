@@ -1,9 +1,9 @@
 /* MIA-TODAY */
 
 body{
-  font-family: "MiaGrotesk-Light","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: MiaGrotesk-Light;
   font-weight:300;
-  color:#222;
+  color:#232323;
   background-color: #fff;
   overflow-x:hidden;
   width: 90%;
@@ -12,7 +12,7 @@ body{
 }
 @media screen and (min-width:67em) {
   body {
-    font-size: 3em;
+    font-size: 5em;
   }
 }
 
@@ -35,7 +35,7 @@ body{
 li{
   display:block;
   padding: 0.1em 0 1em 0;
-  border-top: 1px solid #222;
+  border-top: 1px solid #232323;
 }
 
 li h3 {
@@ -44,7 +44,7 @@ li h3 {
 }
 
 li h3 a {
-  color:#222;
+  color:#232323;
   text-decoration:none;
   margin:0;
   font-family: MiaGrotesk-Bold;
@@ -59,7 +59,7 @@ li p {
 
 li p span.time{
   display: block;
-  font-family: MiaGrotesk-Bold;
+  font-family: MiaGrotesk-Regular;
   margin-top: 0.1em;
 }
 
