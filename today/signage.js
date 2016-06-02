@@ -72,7 +72,7 @@ today(function(err, cal) {
       .attr('id', 'closed')
   }
 
-  var currentMajorExhibitions = events.filter(event => event.typeCategory == 'exhibitions' && event.prominence == 'large')
+  var currentMajorExhibitions = events.filter(function(event) { event.typeCategory == 'exhibitions' && event.prominence == 'large' })
   if(currentMajorExhibitions.length == 0) {
     d3.select("#hours").html('Restaurant closed today. Café open museum hours.')
   }
