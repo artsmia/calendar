@@ -10,7 +10,7 @@ body{
   margin: 1em auto;
   font-size: 2em;
 }
-@media screen and (min-width:67em) {
+@media screen and (min-width:66.789em) {
   body {
     font-size: 4em;
   }
