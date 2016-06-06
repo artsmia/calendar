@@ -65,15 +65,17 @@ today(function(err, cal) {
     var updateLoop = setInterval(loop, 10000)
   }
 
-  // TODO test this in the new layout
-  if((new Date).getDay() == 1) {
-    d3.select("body").append("aside")
-      .html("(We're closed)")
+  var dayOfWeek = (new Date).getDay()
+  if(dayOfWeek == 1) {
+    d3.select("#hours")
+      .html("(Closed Monday)")
       .attr('id', 'closed')
-  }
-
-  var currentMajorExhibitions = events.filter(function(event) { event.typeCategory == 'exhibitions' && event.prominence == 'large' })
-  if(currentMajorExhibitions.length == 0) {
-    d3.select("#hours").html('Restaurant closed today. Café open museum hours.')
+  } else if(dayOfWeek == 6 || dayOfWeek == 0) {
+    // restaurant is open
+  } else {
+    var currentMajorExhibitions = events.filter(function(event) { event.typeCategory == 'exhibitions' && event.prominence == 'large' })
+    if(currentMajorExhibitions.length == 0) {
+      d3.select("#hours").html('Restaurant closed today. Café open museum hours.')
+    }
   }
 })
