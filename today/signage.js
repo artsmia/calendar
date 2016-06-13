@@ -69,7 +69,7 @@ today(function(err, cal) {
   if(dayOfWeek == 1) {
     d3.select("#hours")
       .html("(Closed Monday)")
-      .attr('id', 'closed')
+    d3.select("body").attr('id', 'closed')
   } else if(dayOfWeek == 6 || dayOfWeek == 0) {
     // restaurant is open
   } else {
