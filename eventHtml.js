@@ -9,11 +9,14 @@ module.exports = function(d, excludeDate) {
     }).join(" — ")
     , relativeTime = Date.create(d.timeFrom).relative()
 
-  if(d.title.match("State of the Art:")) {
+  if(d.title.match("Seeing Nature:")) {
     d.typeName = "Tour meets in Gallery 230"
   }
   if(d.title.match("Winterlights at the Purcell-Cutts House")) {
     d.typeName = "Tickets required, meet at 3rd Av entrance 20 minutes early"
+  }
+  if(d.typeName == null) {
+    d.typeName = 'Special Event'
   }
 
   return "<h3><a href='"+d.permalink+"'>"+d.title+"</a></h3>" +

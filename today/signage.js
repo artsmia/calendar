@@ -9,6 +9,7 @@ today(function(err, cal) {
   var list = d3.select("body").append("ul"),
       _today = today(events, date),
       events = _today(events, false),
+      eventsToday = events,
       pastEvents = _today.earlier(events)
       eventHtml = require('../eventHtml')
 
@@ -73,7 +74,11 @@ today(function(err, cal) {
   } else if(dayOfWeek == 6 || dayOfWeek == 0) {
     // restaurant is open
   } else {
-    var currentMajorExhibitions = events.filter(function(event) { event.typeCategory == 'exhibitions' && event.prominence == 'large' })
+    var currentMajorExhibitions = eventsToday.filter(function(event) { event.typeCategory == 'exhibitions' && event.prominence == 'large' })
+
+    if(/Seeing Nature: Landscape Masterworks/.test(currentMajorExhibitions[0])) {
+      currentMajorExhibitions = []
+    }
     if(currentMajorExhibitions.length == 0) {
       d3.select("#hours").html('Restaurant closed today. Café open museum hours.')
     }
