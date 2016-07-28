@@ -76,11 +76,11 @@ today(function(err, cal) {
   } else {
     var currentMajorExhibitions = eventsToday.filter(function(event) { event.typeCategory == 'exhibitions' && event.prominence == 'large' })
 
-    if(/Seeing Nature: Landscape Masterworks/.test(currentMajorExhibitions[0])) {
+    if(/Seeing Nature: Landscape Masterworks/.test(currentMajorExhibitions[0])) { // restaurant closed weekdays for seeing nature
       currentMajorExhibitions = []
     }
     if(currentMajorExhibitions.length == 0) {
-      d3.select("#hours").html('Restaurant closed today. Café open museum hours.')
+      d3.select("#hours").html('Enjoy a treat, meal, coffee or juice in our café, open museum hours.')
     }
   }
 })
