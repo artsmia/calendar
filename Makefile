@@ -20,6 +20,9 @@ build:
 	browserify -t brfs graph/index.js -o graph/bundle.js
 	browserify -t brfs today/signage.js -o today/signage-bundle.js
 
+watch:
+	watchify -t brfs today/signage.js -o today/signage-bundle.js
+
 by_date:
 	@cat calendar.json | jq 'group_by(.dateFrom) | map({date: .[0].dateDisplay | split(" at")[0], length: .|length, event: map(.title+" -- "+(.dateDisplay | split("at ") | reverse | .[0]))})'
 
