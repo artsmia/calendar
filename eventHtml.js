@@ -9,7 +9,7 @@ module.exports = function(d, excludeDate) {
     }).join(" — ")
     , relativeTime = Date.create(d.timeFrom).relative()
 
-  if(d.title.match("Seeing Nature:")) {
+  if(d.title.match("Seeing Nature:") && d.typeName == "Public Tour") {
     d.typeName = "Tour meets in Gallery 230"
   }
   if(d.title.match("Winterlights at the Purcell-Cutts House")) {
