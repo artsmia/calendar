@@ -9,11 +9,11 @@ module.exports = function(d, excludeDate) {
     }).join(" — ")
     , relativeTime = Date.create(d.timeFrom).relative()
 
-  if(d.title.match("Seeing Nature:") && d.typeName == "Public Tour") {
-    d.typeName = "Tour meets in Gallery 230"
+  if(d.title.match("Martin Luther:") && d.typeName == "Public Tour") {
+    d.typeName = "Tour meets in the Fountain Court (G235)"
   }
   if(d.title.match("Winterlights at the Purcell-Cutts House")) {
-    d.typeName = "Tickets required, meet at 3rd Av entrance 20 minutes early"
+    d.typeName = "Tickets required, meet at 3rd Ave entrance 20 minutes early"
   }
   if(d.typeName == null) {
     d.typeName = 'Special Event'
