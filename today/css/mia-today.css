@@ -13,6 +13,7 @@ body{
 @media screen and (min-width:60em) {
   body {
     font-size: 4em;
+    overflow: hidden;
   }
 }
 
@@ -37,6 +38,11 @@ li{
   padding: 0.1em 0 1em 0;
   border-top: 3px solid #232323;
   font-size: 80%;
+  page-break-before: always;
+}
+
+li:nth-child(n+6) {
+  display: none;
 }
 
 li h3 {
