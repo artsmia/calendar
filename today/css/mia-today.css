@@ -100,3 +100,8 @@ li.art-out-of-the-box, li.art-in-the-park {
 #hours {
   margin: 1em 0;
 }
+
+#tours {
+  position: absolute;
+  bottom: 1em;
+}

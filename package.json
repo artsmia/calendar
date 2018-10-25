@@ -4,8 +4,7 @@
   "description": "What's happening at the MIA.",
   "main": "index.js",
   "dependencies": {
-    "brfs": "~1.0.0",
-    "d3": "~3.4.3",
+    "d3": "^3.5.17",
     "nets": "^3.1.0",
     "sugar": "^1.4.1"
   },
