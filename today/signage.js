@@ -66,19 +66,41 @@ today(function(err, cal) {
     var updateLoop = setInterval(loop, 10000)
   }
 
-  var dayOfWeek = (new Date).getDay()
+  var dayOfWeek = date.getDay()
   if(dayOfWeek == 1) {
     d3.select("#hours")
       .html("Closed Mondays")
     d3.select("body").attr('id', 'closed')
   } else if(dayOfWeek == 6 || dayOfWeek == 0) {
-    // restaurant is open
+    // restaurant is open Sat, Sun
+    d3.select("#hours").html('Restaurant open today: 11am-2:30pm')
   } else {
-    // restaurant is open if there's an exhibition with `prominence == large`
-    var currentMajorExhibitions = eventsToday.filter(function(event) { return event.typeCategory == 'exhibitions' && event.prominence == 'large' })
+    // restaurant is open Tues-Fri if Egypt is still on
+    var currentExhibitions = eventsToday.filter(function(event) { return event.typeCategory == 'exhibitions' && event.prominence == 'large' })
+    // TODO is there a better way to identify a current target exhibition?
+    var targetExhibition = !!currentExhibitions.find(function(e) {
+      return e.title === "Egypt's Sunken Cities"
+    })
+    // …the restaurant also chooses when they are/aren't open differently than this
+    // was optimistically programmed for, so is there a better way to flip this switch
+    // site-wide?
 
-    if(currentMajorExhibitions.length == 0) {
-      d3.select("#hours").html('Restaurant closed today. Café open museum hours.')
+    if(targetExhibition) {
+      d3.select("#hours").html('Restaurant open today: 11am-2:30pm')
     }
+  }
+
+  // Add tour meeting instructions when the given day has tours scheduled
+  var hasMiaTours = !!events.find(function(e) { return e.typeName === "Daily Public Tour" })
+  if(hasMiaTours) {
+    d3.select('#tours').append('p').html(
+      '<p>Mia Tours meet in the 2nd floor Rotunda.</p>'
+    )
+  }
+  var hasPCHTours = !!events.find(function(e) { return e.title === "Purcell-Cutts House Tour" })
+  if(hasPCHTours) {
+    d3.select('#tours').append('p').html(
+      '<p>For Purcell-Cutts House tours, board the shuttle 20 minutes prior at the 3rd Ave entrance.</p>'
+    )
   }
 })
