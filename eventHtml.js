@@ -15,7 +15,7 @@ module.exports = function(d, excludeDate) {
   if(d.title.match("Winterlights at the Purcell-Cutts House")) {
     d.typeName = "Tickets required, meet at 3rd Ave entrance 20 minutes early"
   }
-  if(d.typeName == null) {
+  if(d.typeName == null || d.typeName == 'Homepage Feed') {
     d.typeName = 'Special Event'
   }
 
