@@ -35,3 +35,6 @@ deploy:
 
 refreshLobbyScreen:
 	ssh today "sh ./restart-chromium.sh"
+
+screenshot:
+	ssh pi@signage-today.local "DISPLAY=:0 scrot today.png; cat today.png" > today.png && open today.png

@@ -90,6 +90,11 @@ today(function(err, cal) {
     }
   }
 
+  // example of how to show date specific messaging
+  if(date > new Date('2019-02-19') && date < new Date('2019-02-22')) {
+    d3.select('#hours').html('Agra Culture restaurant will be closed temporarily through Thursday, Feburary 21.  It reopens Friday, February 22.')
+  }
+
   // Add tour meeting instructions when the given day has tours scheduled
   var hasMiaTours = !!events.find(function(e) { return e.typeName === "Daily Public Tour" })
   if(hasMiaTours) {
